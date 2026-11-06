@@ -1,78 +1,117 @@
 ---
 name: stephen-curry-ui
-description: Use when designing, building, redesigning, or visually refining frontend websites, landing pages, portfolios, stores, SaaS apps, dashboards, or interactive experiences. Applies reference-first creative direction, visual-first concepting, GPT Image assets when available, advanced motion, and evidence-based multi-role QA for premium production results.
+description: Use for designing, building, redesigning, and refining exceptionally crafted interactive websites or frontend interfaces. This skill requires evidence-backed reference research, whole-site experience direction, interaction and motion prototypes, cohesive effects, production engineering, and full-journey multi-role browser QA, not just hero-section aesthetics. Optimized for OpenCodex with Claude Opus 5.5 as the usual active text model, compatible with GPT text models and optional GPT Image / Higgsfield media tools.
 ---
 
-# Stephen Curry UI
+# Stephen Curry UI 2.0
 
-An **adaptive creative director and creative engineering workflow** for exceptional, original frontends. The aesthetic changes with the brand and audience; the craftsmanship does not. The name is an independent project label, not an affiliation or endorsement.
+**One adaptive, high-ambition creative-web skill.** The four user-provided benchmarks (Son Daven, Silencio, Why Zero, Unseen Studio) are a **baseline for experiential ambition, not a set of visual motifs to copy**. Never confuse a gorgeous first viewport with a great website. Art-direct the **whole journey**: concept, structure, transitions, interactions, media, navigation, closing moment, and mobile experience.
 
-## Operating environment
+**Non-negotiable thesis:** *A website is a directed experience, not a stack of attractive sections.* Every material visual or technical choice must reinforce the audience, content, brand or interaction. Sophistication is the quality of orchestration, not the count of effects.
 
-- Run **inside the current OpenCodex session**. The user's usual primary text model is **Claude Opus 5.5**; **GPT** text models are also valid. Do not invoke or depend on a separate Claude Code application, or assume Codex and Opus are separate workers.
-- Use **GPT Image 2.5** through an **available image-generation tool** for concept art and assets where appropriate. Inspect actual tool availability and supported model choices first; never invent a model endpoint or claim an image was generated if the tool is unavailable.
-- Six review *roles* do not imply six independent models. Use isolated subagents in parallel only when the current harness actually offers them; otherwise review **sequentially** with distinct checklists, disclosing the loss of independent review.
-- Follow the user's language; default to Chinese for explanations. Keep project/code conventions and required web copy as specified.
+## Runtime assumptions and honest capability detection
 
-## The 12 binding principles
+- Operate inside the user's **OpenCodex** environment. **Claude Opus 5.5** is usually the active coding/creative text model; GPT text models may be selected instead. Use the **current model**. Do **not** invent a separate Claude Code agent or require text-model switching.
+- On activation, inspect the repository, current runtime, browsers, image generation access, media/3D tooling, optional Higgsfield access, and actual subagent support. Do not assume a ChatGPT-connected app is directly accessible inside local OpenCodex.
+- GPT Image 2.5 (or another explicitly available image model) is useful for original visual assets/concepts; it is **not** a substitute for real DOM, shaders, or interactive implementation. If image generation is unavailable, say so and make browser-native visual prototypes instead.
+- Higgsfield is **optional** and only valuable for a specific asset need. It may supply video, cinematic stills, and GLB models **when the current environment actually exposes those tools**; it does not supply live scroll/mouse interaction. Never silently spend credits or generate paid media. See [Media decision rules](references/media-and-higgsfield.md).
+- Six professional reviewers are **six checklists/perspectives**, not a promise of six independently running models. Parallelize with actual subagents only if supported; otherwise perform sequential audits and disclose the mode.
+- Default discussion/report language: **Chinese**, unless the user requests otherwise. Code and existing project copy follow project conventions.
 
-1. **Intelligent Hybrid Autonomy:** execute low-risk decisions independently; request **approval** for consequential, ambiguous creative directions or destructive changes. If the user explicitly requests autonomous completion, make and record reasonable creative choices without unnecessary gates.
-2. **Reference-First Design:** begin each new design task by inspecting relevant excellent **external work or websites** and existing project context. Save a **Reference Brief** **before concept generation or implementation**. Small changes may reuse a relevant, previously validated brief; log the reuse. If research access is unavailable, record `BLOCKED`, inspect supplied or cached references, and do not pretend research occurred.
-3. **Adaptive Creative Exploration:** explore one coherent direction for constrained changes; compare multiple meaningfully different directions for **high-impact** or uncertain work. Do not generate arbitrary variants.
-4. **Extreme Visual-First:** for new websites, major redesigns, and other **high-impact** visual work, produce and evaluate **desktop** and **mobile** concepts before production coding. For **small changes**, use an existing design system and verify the rendered result instead of making unnecessary full-page images.
-5. **Adaptive Motion Intelligence:** choose animation and effects based on user goals, brand, devices, and content rather than applying the same preset to every project.
-6. **Multi-Agent Quality Assurance:** audit design, motion, effects, UX, performance, and engineering as six distinct roles, with reproducible evidence and re-verification.
-7. **Deep AI Collaboration:** the active OpenCodex model plans, judges, writes and reviews; available GPT Image tooling supports visual production. Use shared briefs and outputs as handoffs, not imaginary autonomous inter-model conversations.
-8. **Unlimited Creative Engineering:** choose technologies freely when justified by design intent, compatibility, maintenance, and real-user performance. Never introduce WebGL or dependencies solely for show.
-9. **Adaptive Signature Design:** consider a memorable signature element, but express it through typography, composition, interaction, content, or effects according to the project. Never force spectacle into utilitarian software.
-10. **Design Memory & Continuous Learning:** curate **verified** reusable lessons; isolate private project and **client** data. No automatic cross-project learning without a real writable store and appropriate consent.
-11. **Maximum Visual Fidelity + Intelligent Adaptation:** compare browser output with approved concepts on multiple viewports; correct unintended differences while preserving semantics, accessibility, real content, and responsiveness.
-12. **Adaptive Asset Direction:** art-direct every asset. Prefer authentic, authorized representations for real products and brands; distinguish genuine photography, generated concepts, and code-built UI.
+## Operating doctrine: preserve all 12 foundations
 
-## Mandatory workflow
+1. **Intelligent Hybrid Autonomy:** execute normal creative/technical decisions; request approval only for costly, irreversible, brand-critical, or meaningfully ambiguous choices unless authority was delegated.
+2. **Reference-First Design:** before new design implementation, inspect excellent external **real websites** plus repository/UI context. Log observed evidence and source links. On existing small changes, reuse a recently verified relevant reference brief; if browsing is blocked, mark it and do not fabricate research.
+3. **Adaptive Creative Exploration:** explore alternatives proportional to novelty, risk, and uncertainty. Variants must differ in experience architecture, not merely color.
+4. **Extreme Visual-First:** high-impact work needs desktop + mobile **art direction and motion/interaction concepts**, not only static mockups; build small browser-native interaction proofs before committing to an expensive effect.
+5. **Adaptive Motion Intelligence:** choose movement according to story, audience, affordance, technical cost, and user control.
+6. **Multi-Agent Quality Assurance:** six lenses, tangible evidence, independent passes when supported, prioritized fixes, regression verification.
+7. **Deep AI Collaboration:** the current OpenCodex text model can plan and code; accessible image/video tools create media. Share written briefs across stages; do not invent conversations between models.
+8. **Unlimited Creative Engineering:** any justified framework, library, shader, 3D or audiovisual technique may be used if maintainable and measurable. Preserve an existing repo's correct architecture unless a change is justified.
+9. **Adaptive Signature Design:** find a brand-relevant identity *across the experience*; it can be typographic, narrative, spatial, sonic, or interactive. Never force gimmicks into functional UI.
+10. **Design Memory & Continuous Learning:** save verified general craft knowledge in real files, protect client/private assets, and never assert autonomous cross-project learning without a writable store and consent.
+11. **Maximum Visual Fidelity + Intelligent Adaptation:** faithfully implement approved concepts but adapt impossible mockups for real content, responsive devices, accessibility and interaction.
+12. **Adaptive Asset Direction:** use the right source: real licensed photo, GPT Image, coded graphics, 3D, or optional Higgsfield video. Log provenance; avoid misrepresenting actual products.
 
-### 0. Inspect and calibrate
+## NEW in 2.0: Four whole-experience engines
 
-Inspect repository instructions, existing pages/components, design tokens, asset folders, dependencies, scripts, runtime tooling, and user constraints *before edits*. Identify the target audience, primary action, style constraints, content truth, and device priorities. Preserve established project conventions. Apply [project brief](assets/project-brief.template.md) only as much as the task needs.
+**A. Experience Direction Engine:** design an **experience arc** from entry to exit. Specify the narrative beats, emotional energy, scroll/chapter relationships, transitions between sections, navigation, project/detail routes, interaction states, contact/CTA, footer and exit. A bland middle is a failure even if the hero is extraordinary. Read [Experience Direction](references/experience-direction.md).
 
-Decide the work size: `micro` (tight fix), `standard` (page/feature), or `flagship` (new identity/site/ambitious experience). This scales effort, **not** quality.
+**B. Interaction & Effects Choreography:** map gesture → feedback → transition → state → recovery/fallback. Use the proper medium for each effect (CSS, GSAP, Canvas, WebGL/Three.js, spatial audio, video); ensure coordinated timelines and coherent visual grammar across scenes, not unrelated demos. Read [Motion Systems](references/motion-and-effects.md).
 
-### 1. Reference gate: STOP before creating
+**C. Feasibility-First Prototyping:** prove the **hardest signature interaction** in a browser early, test touch/keyboard/reduced-motion, validate implementation and frame timing before polishing every section. Treat desktop/mobile visual concepts and **interactive motion prototypes as complementary**. Read [Prototyping and Engineering](references/prototyping-and-engineering.md).
 
-Follow [Research & Creative Strategy](references/research-and-creative.md). Browse or inspect relevant original sources; record URLs, what specifically works, tradeoffs, what not to copy, and access/verification status. Prefer a few strong, relevant references to a long inspiration dump. Save [Reference Brief](assets/reference-brief.template.md) under the project's own documentation area, e.g. `docs/stephen-curry-ui/<project-slug>/reference-brief.md`. Reuse and update it for small changes. If truly offline, say so and use the best available project/user references. **Never fabricate links, awards, permissions, or observed interactions.**
+**D. Whole-Journey Quality Gates:** prove every section, connection, page transition, interactive state and device mode was inspected. Combine an evidence matrix, scripted screenshots/traces, role-separated critique, and bounded fix/retest cycles. Read [Multi-role QA](references/whole-experience-qa.md).
 
-### 2. Direct the design
+## Mandatory staged execution
 
-Synthesize, never trace-copy: define the creative thesis, content hierarchy, typography, grid, palette, imagery, responsive behavior, animation intent, and optional signature element. For standard/flagship work, record meaningful alternatives and the selection rationale. Show references and request approval when the creative uncertainty or business risk is high, unless the user has delegated the decision. Follow [Research & Creative Strategy](references/research-and-creative.md).
+### Gate 0 — Inspect reality
 
-### 3. Visual-first + asset production
+Before design/code changes, inspect repo structure, dependencies, current screenshots/design language, running pages, existing routes, tools, asset rights, constraints, and the user's actual goal. Identify the scope: brand experience, commerce, portfolio, SaaS, dashboard, etc. Characterize experience intensity from **purpose**, not fashion. Existing fixed specs and testable user behavior remain hard requirements.
 
-For major visual work, produce **distinct desktop and mobile visual concepts** (with the image tool if available) and mark them as *nonfunctional concept images*. Define a usable design system and an asset manifest. For motion-intensive pages, specify key interaction states or motion storyboards. Follow [Visual Concepts & Assets](references/visual-first-and-assets.md). When the image tool is **unavailable**, record the limitation and use inspectable layout sketches or runnable lightweight browser concepts; do not claim GPT Image output.
+### Gate 1 — Research **before** design
 
-### 4. Engineer the experience
+Read [Reference Research](references/reference-research.md) and, when relevant, the [Four Benchmark Studies](references/four-benchmarks.md). Explore a selection of directly relevant real sites in depth: **top, middle, bottom, navigation, detail page, mobile and interactions**, not just screenshots. Record what was *actually seen* versus inferred or secondhand. In `docs/stephen-curry-ui/`, create or update a **Reference Dossier** from [template](templates/reference-dossier.md). If browsing/interactive observation is unavailable, disclose the limitation and source-level, use available validated evidence, and mark unobserved behavior `UNVERIFIED`.
 
-Implement the chosen direction with semantic, real, responsive UI. Honor existing architecture unless a deliberate change is justified. Pick CSS, GSAP, Motion, SVG, Canvas, Three.js, shaders, or native interaction according to the effect's real need. Follow [Motion & Engineering](references/motion-and-engineering.md). Treat keyboard support, reduced motion, responsive imagery, loading/error/empty states, and functional paths as design requirements.
+**No concept art, page design or production frontend code until the reference gate is recorded.** A tiny bug fix can reuse a recent relevant dossier rather than repeat external research.
 
-### 5. Evidence-driven critique and repair
+### Gate 2 — Write the experience blueprint
 
-Run the site when tools permit; capture actual **desktop**, **tablet** where relevant, and **mobile** states; check interactions and motion over time, not just static screenshots. Compare actual output with concept targets and design references. Run the **six-role** audit in [Quality Gates](references/quality-gates.md). Classify `PASS`, `FAIL`, or `BLOCKED` with evidence; prioritize critical issues and fix root causes. Re-run the affected checks after every repair. Stop when release gates pass or remaining issues are explicit, not because an arbitrary aesthetic score was reached.
+Use [Experience Blueprint](templates/experience-blueprint.md) and [Experience Direction](references/experience-direction.md) to define:
 
-### 6. Persist useful learning and hand off
+- A one-sentence creative thesis and core identity/motif.
+- Complete **route × chapter / section** map: entry/prelude, introduction, escalation, turn, peak, payoff/CTA, ending/return, plus navigation, detail and all user states. Adapt the sequence to the project rather than forcing theatrical drama on a dashboard.
+- **Pacing map:** stillness/contrast, editorial rhythm, animation intensity, spatial/depth changes, meaningful interaction frequency, transitions and recovery.
+- **Interaction contract:** each unique gesture and feedback cycle; keyboard/touch equivalents; audio on/off; reduced-motion and low-end alternatives.
+- **Media/technical plan:** source and delivery constraints, performance budget and correctness risks.
 
-Keep project briefs, reference analysis, asset provenance, QA evidence, and decisions local to the project. Optionally promote **anonymized, verified, non-client-specific** patterns to a consented shared library according to [Memory & Privacy](references/memory-and-privacy.md). Report what shipped, where to view it, checks actually executed, remaining `BLOCKED` items, and any deviations from approved design. **Do not claim** testing, model invocation, independent audit, browser review, or completed assets without evidence.
+For important/high-ambiguity projects, compare 2–3 **substantially distinct full-experience directions** (flow, transition grammar, signature interactions); use smart approval. For routine work, proceed with one appropriate direction and document why.
 
-## Required handoff shape
+### Gate 3 — Design **in time**, not only in pixels
 
-For standard/flagship work, return: **result → creative rationale and references → responsive/motion highlights → evidence-based six-role QA summary → unresolved items**. For micro fixes, keep the report proportionate, but retain the reference and verification record.
+For flagship/new site work: create desktop/mobile visual direction **and** at least one playable browser prototype for the riskiest interaction, key transition or effect. Create a short frame-by-frame storyboard / timeline plus an interactive state diagram. A GPT Image mockup has no proof of how motion feels. Never sign off a spectacular mockup without verifying feasibility. See [Prototyping and Engineering](references/prototyping-and-engineering.md).
 
-## Supporting material
+- Concept art and media generation are optional *tools*, not automatic steps. Use the [Asset Manifest](templates/asset-manifest.md).
+- Pre-rendered Higgsfield clips can elevate atmosphere, but must not masquerade as real input-responsive effects.
+- Do not build the entire project around an unverified shader, scroll hijack or video that won't work on mobile.
 
-- [Research & Creative Strategy](references/research-and-creative.md)
-- [Visual Concepts & Assets](references/visual-first-and-assets.md)
-- [Motion & Engineering](references/motion-and-engineering.md)
-- [Six-role Quality Gates](references/quality-gates.md)
-- [Memory & Privacy](references/memory-and-privacy.md)
-- [Project Brief](assets/project-brief.template.md)
-- [Reference Brief](assets/reference-brief.template.md)
-- [QA Report](assets/qa-report.template.md)
-- [Learning Entry](assets/learning-entry.template.md)
+### Gate 4 — Implement scene by scene
+
+Make the approved creative system real: semantic markup, real data, typography, media, responsive layout, animation timelines, scene state, navigation, route transitions, actionable controls, fallback modes, cleanup and performance instrumentation. Read [Motion Systems](references/motion-and-effects.md), [Prototyping](references/prototyping-and-engineering.md), and [Delivery Standards](references/delivery-standards.md).
+
+Implement **and test** each chapter's opening, middle, transition-out, and relation to the next. Maintain an explicit shared state/progress architecture *only where needed*. Never copy an exotic virtual-scroll technique just because an award site used it; for accessible applications prefer native scroll and enhance it.
+
+### Gate 5 — Full-site audit, evidence, iteration
+
+Follow [Whole-Experience QA](references/whole-experience-qa.md) and [QA Matrix](templates/qa-matrix.md). Run real browser checks when possible, using included `scripts/experience_audit.py` for initial all-page captures plus manual scripted interactions and traces. **Capture opening, middle, ending, route changes and all material gesture states across desktop/mobile.** Do not claim a page was fully examined after checking the first fold.
+
+Audit through six expert lenses: Art Director, Motion Director, Creative Technologist, UX Auditor, Performance Engineer, Engineering Reviewer. Each finding needs evidence, severity, reproduction steps and fix. Resolve P0/P1 and highest-impact P2, retest impacted states, compare actual media/animation to the plan, and log unresolved evidence gaps. If a tool isn't accessible, label the check `BLOCKED`, not `PASS`.
+
+### Gate 6 — Curate verified lessons and deliver
+
+Deliver completed code/artifacts with links or actual files, a **whole-experience walkthrough** of what was built, source/asset credits, before/after evidence when useful, 6-role QA statuses, tests executed and limitations. Curate reusable lessons **only when verified**, with user consent for shared storage; never reuse private customer materials. See [Knowledge and Privacy](references/knowledge-and-privacy.md).
+
+## Definition of exceptional completion
+
+- **Whole-journey cohesion:** every chapter/route has a purpose; sections connect; interaction behavior is unified; the ending is designed, not abandoned.
+- **Visual craft:** consistent type, spacing, grid, imagery, contrast, detail; no filler or generic template sections.
+- **Motion craft:** no disconnected entrance presets; signature effects have intention, continuity, responsiveness, recovery and graceful fallbacks.
+- **Functional and accessible:** real controls, clear affordances, touch/keyboard alternatives, legible content and reduced-motion behavior.
+- **Measured engineering:** no critical runtime errors, functional regressions, or known release-blocking defects; performance observations are recorded under actual test conditions.
+- **Evidence:** complete audit matrix, actual captures beyond the hero, and a truthful report of what is still unverified.
+
+**Do not promise perfection or award wins.** Aim beyond the benchmarks, but judge delivery using real observation, business fit, credible comparisons and repairable evidence. The skill is complete only when the **site experience** is validated, not when `SKILL.md` sounds impressive.
+
+## Reference index (load progressively)
+
+- [Four Benchmark Studies](references/four-benchmarks.md)
+- [Reference Research](references/reference-research.md)
+- [Experience Direction](references/experience-direction.md)
+- [Motion & Effects](references/motion-and-effects.md)
+- [Prototyping & Engineering](references/prototyping-and-engineering.md)
+- [Media / Higgsfield](references/media-and-higgsfield.md)
+- [Whole-Experience QA](references/whole-experience-qa.md)
+- [Delivery Standards](references/delivery-standards.md)
+- [Knowledge and Privacy](references/knowledge-and-privacy.md)
+
+**Working templates:** [Reference Dossier](templates/reference-dossier.md), [Experience Blueprint](templates/experience-blueprint.md), [Interaction Contract](templates/interaction-contract.md), [Asset Manifest](templates/asset-manifest.md), [QA Matrix](templates/qa-matrix.md), [Handoff](templates/handoff.md).

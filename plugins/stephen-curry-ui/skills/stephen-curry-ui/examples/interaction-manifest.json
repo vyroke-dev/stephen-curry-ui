@@ -1,0 +1,13 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "actions": [
+        {"type": "hover", "selector": "a[href]"},
+        {"type": "press", "key": "Tab"},
+        {"type": "scroll", "delta": 650},
+        {"type": "wait", "ms": 400}
+      ]
+    }
+  ]
+}
