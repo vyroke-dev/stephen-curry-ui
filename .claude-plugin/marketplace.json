@@ -1,0 +1,14 @@
+{
+  "name": "stephen-curry-marketplace",
+  "owner": {
+    "name": "vyroke-dev"
+  },
+  "plugins": [
+    {
+      "name": "stephen-curry-ui",
+      "source": "./plugins/stephen-curry-ui",
+      "description": "Adaptive creative direction and frontend engineering workflow."
+    }
+  ],
+  "description": "Frontend design and engineering skills."
+}

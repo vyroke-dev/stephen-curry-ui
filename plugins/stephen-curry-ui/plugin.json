@@ -1,0 +1,7 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "stephen-curry-ui",
+  "version": "1.0.0",
+  "description": "Adaptive creative direction and frontend engineering workflow.",
+  "repository": "https://github.com/vyroke-dev/stephen-curry-ui"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "stephen-curry-marketplace",
+  "plugins": [
+    {
+      "name": "stephen-curry-ui",
+      "source": {
+        "source": "local",
+        "path": "./plugins/stephen-curry-ui"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
