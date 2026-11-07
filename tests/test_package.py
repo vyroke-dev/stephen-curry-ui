@@ -27,7 +27,7 @@ class SkillPackageTest(unittest.TestCase):
             with self.subTest(keyword=keyword): self.assertIn(keyword.lower(),self.skill.lower())
 
     def test_higgsfield_optional_and_model_flexible(self):
-        for keyword in ['Higgsfield','optional','Opus 5.5','GPT', 'credits','current model','Claude Code']:
+        for keyword in ['Higgsfield','optional','Model-agnostic','image model', 'credits','current model','Claude Code']:
             with self.subTest(keyword=keyword):self.assertIn(keyword,self.skill)
 
     def test_six_qa_roles(self):
