@@ -1,0 +1,7 @@
+{
+  "views": ["desktop", "mobile"],
+  "routes": [
+    {"path": "/", "scenes": ["entry", "story", "proof", "closing"], "states": ["idle", "scroll-transition", "navigation-focus", "reduced-motion"], "critical": true},
+    {"path": "/work", "scenes": ["intro", "projects", "detail-teaser", "exit"], "states": ["idle", "hover", "keyboard", "detail-open"], "critical": true}
+  ]
+}
