@@ -1,0 +1,140 @@
+{
+  "project_id": "new-film-001",
+  "title": "Untitled Film",
+  "version": "0.1.0",
+  "language": "zh-CN",
+  "format": {
+    "target_duration_s": 15,
+    "aspect_ratio": "16:9",
+    "fps_target": 24,
+    "resolution_target": "provider-dependent"
+  },
+  "creative": {
+    "logline": "Describe who wants what, what resists them, and what changes.",
+    "genre": "drama",
+    "emotion_arc": "curiosity to revelation",
+    "visual_bible": "One location, motivated practical light, restrained camera language.",
+    "beats": [
+      {
+        "id": "BE01",
+        "duration_s": 5,
+        "goal": "Establish"
+      },
+      {
+        "id": "BE02",
+        "duration_s": 5,
+        "goal": "Complicate"
+      },
+      {
+        "id": "BE03",
+        "duration_s": 5,
+        "goal": "Resolve or tease"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "asset_id": "loc-01",
+      "kind": "location",
+      "description": "Single location; details to be set by brief",
+      "locked_traits": [],
+      "reference_uris": []
+    }
+  ],
+  "shots": [
+    {
+      "shot_id": "SH01",
+      "scene_id": "SC01",
+      "order": 1,
+      "duration_s": 5,
+      "story_purpose": "Establish geography",
+      "action": "One opening action",
+      "asset_refs": [
+        "loc-01"
+      ],
+      "shot_size": "wide",
+      "angle": "eye-level",
+      "composition": "single focal subject",
+      "camera_motion": "locked-off",
+      "lens_mm": null,
+      "aperture_f": null,
+      "lighting": "motivated light",
+      "palette": "neutral",
+      "sound": "room tone",
+      "continuity": {
+        "entry": "opening state",
+        "exit": "end of first action",
+        "screen_direction": "unspecified"
+      },
+      "prompt": "A clear five-second establishing wide shot with one action and motivated lighting.",
+      "avoid": [],
+      "status": "planned"
+    },
+    {
+      "shot_id": "SH02",
+      "scene_id": "SC01",
+      "order": 2,
+      "duration_s": 5,
+      "story_purpose": "Complicate",
+      "action": "One complication",
+      "asset_refs": [
+        "loc-01"
+      ],
+      "shot_size": "medium",
+      "angle": "eye-level",
+      "composition": "focus on decision",
+      "camera_motion": "subtle push in",
+      "lens_mm": null,
+      "aperture_f": null,
+      "lighting": "same motivated light",
+      "palette": "neutral",
+      "sound": "ambient sound",
+      "continuity": {
+        "entry": "state after first shot",
+        "exit": "changed state",
+        "screen_direction": "unspecified"
+      },
+      "prompt": "A five-second medium shot where one clear complication occurs; subtle push-in, spatial continuity preserved.",
+      "avoid": [],
+      "status": "planned"
+    },
+    {
+      "shot_id": "SH03",
+      "scene_id": "SC01",
+      "order": 3,
+      "duration_s": 5,
+      "story_purpose": "Resolution or tease",
+      "action": "One final image",
+      "asset_refs": [
+        "loc-01"
+      ],
+      "shot_size": "close-up",
+      "angle": "eye-level",
+      "composition": "visual emphasis",
+      "camera_motion": "locked-off",
+      "lens_mm": null,
+      "aperture_f": null,
+      "lighting": "same motivated light",
+      "palette": "neutral",
+      "sound": "ambience holds",
+      "continuity": {
+        "entry": "state after second shot",
+        "exit": "final state",
+        "screen_direction": "unspecified"
+      },
+      "prompt": "A five-second final close-up, one expressive action and a clear visual endpoint.",
+      "avoid": [],
+      "status": "planned"
+    }
+  ],
+  "assumptions": [
+    "This is a planning template. No images or video have been generated."
+  ],
+  "approved_decisions": [],
+  "generation": {
+    "status": "planned",
+    "provider": null,
+    "job_ids": [],
+    "output_uris": []
+  }
+}

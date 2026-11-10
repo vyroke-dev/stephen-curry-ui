@@ -1,0 +1,189 @@
+{
+  "project_id": "noir-letter-001",
+  "title": "The Red Seal / 红色封印",
+  "version": "1.0.0",
+  "language": "zh-CN",
+  "format": {
+    "target_duration_s": 15,
+    "aspect_ratio": "16:9",
+    "fps_target": 24,
+    "resolution_target": "1080p (if supported)"
+  },
+  "creative": {
+    "logline": "一位孤独的侦探在深夜打开威胁信，门外似乎有人先他一步知道了秘密。",
+    "genre": "Noir thriller",
+    "emotion_arc": "孤独 → 察觉危险 → 悬念",
+    "visual_bible": "1940s-inspired noir; deep cyan shadows, warm amber practical lamp, fine grain, restrained camera movement; same desk, window on frame-right, door on frame-left.",
+    "beats": [
+      {
+        "id": "BE01",
+        "duration_s": 5,
+        "goal": "建立侦探孤独且封闭的空间"
+      },
+      {
+        "id": "BE02",
+        "duration_s": 5,
+        "goal": "以信封红印章作为危险信息的焦点"
+      },
+      {
+        "id": "BE03",
+        "duration_s": 5,
+        "goal": "门把手的动作制造未解决的威胁"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "asset_id": "ch-detective",
+      "kind": "character",
+      "description": "Middle-aged detective with neat dark hair and charcoal trench coat",
+      "locked_traits": [
+        "dark hair",
+        "charcoal trench coat",
+        "no hat",
+        "right hand holds envelope"
+      ],
+      "reference_uris": []
+    },
+    {
+      "asset_id": "loc-office",
+      "kind": "location",
+      "description": "Small 1940s private-detective office; door screen-left, desk center, window screen-right",
+      "locked_traits": [
+        "door screen-left",
+        "desk center",
+        "window screen-right",
+        "amber desk lamp"
+      ],
+      "reference_uris": []
+    },
+    {
+      "asset_id": "prop-letter",
+      "kind": "prop",
+      "description": "Ivory envelope with one dark-red wax seal, no legible writing",
+      "locked_traits": [
+        "ivory paper",
+        "one red wax seal",
+        "no writing"
+      ],
+      "reference_uris": []
+    }
+  ],
+  "shots": [
+    {
+      "shot_id": "SH01",
+      "scene_id": "SC01",
+      "order": 1,
+      "duration_s": 5,
+      "story_purpose": "建立冷清的办公室以及孤独的侦探",
+      "action": "侦探独坐书桌前，从桌面缓缓拿起一封未拆的信。",
+      "asset_refs": [
+        "ch-detective",
+        "loc-office",
+        "prop-letter"
+      ],
+      "shot_size": "wide",
+      "angle": "eye-level",
+      "composition": "door frame-left, detective center, rainy window frame-right",
+      "camera_motion": "locked-off",
+      "lens_mm": 35,
+      "aperture_f": 4,
+      "lighting": "warm desk lamp camera-left, cold rain reflections from window camera-right",
+      "palette": "amber and desaturated cyan",
+      "sound": "gentle rainfall, distant city ambience",
+      "continuity": {
+        "entry": "envelope on desk, detective seated",
+        "exit": "detective lifts envelope in right hand",
+        "screen_direction": "stationary"
+      },
+      "prompt": "5-second single wide locked-off noir shot in a small office: door on screen-left, desk at center, rainy window on screen-right. The same detective with dark hair and a charcoal trench coat sits, then slowly lifts an ivory envelope with one red seal in his right hand. Warm amber desk lamp from camera-left, cold cyan rain reflection from camera-right. Quiet unease, fine grain, no sudden cuts.",
+      "avoid": [
+        "changing coat",
+        "moving door to opposite side",
+        "extra people"
+      ],
+      "status": "planned"
+    },
+    {
+      "shot_id": "SH02",
+      "scene_id": "SC01",
+      "order": 2,
+      "duration_s": 5,
+      "story_purpose": "把观众注意力缩到危险线索",
+      "action": "右手握住信封，拇指停在红色蜡封上方。",
+      "asset_refs": [
+        "ch-detective",
+        "loc-office",
+        "prop-letter"
+      ],
+      "shot_size": "insert close-up",
+      "angle": "slightly high",
+      "composition": "seal centered, right hand enters from lower-right",
+      "camera_motion": "slow dolly-in",
+      "lens_mm": 85,
+      "aperture_f": 4,
+      "lighting": "same amber lamp on left, soft cyan edge reflection on right",
+      "palette": "ivory, deep red, warm amber, cyan black",
+      "sound": "rain continues; slight paper rustle",
+      "continuity": {
+        "entry": "envelope held in detective's right hand",
+        "exit": "thumb suspended just above the red wax seal",
+        "screen_direction": "stationary"
+      },
+      "prompt": "5-second insert close-up, consistent ivory envelope with a single dark-red wax seal in the detective's right hand. He lifts his thumb toward the seal then pauses before touching it. Slow subtle dolly-in, 85mm-equivalent portrait compression, f/4-look so the seal remains sharp. The same amber desk lamp illuminates from frame-left, cyan rainy highlights from frame-right. One continuous action, no invented writing.",
+      "avoid": [
+        "extra fingers",
+        "extra seals",
+        "envelope changing color",
+        "unreadable random text"
+      ],
+      "status": "planned"
+    },
+    {
+      "shot_id": "SH03",
+      "scene_id": "SC01",
+      "order": 3,
+      "duration_s": 5,
+      "story_purpose": "通过门把手制造被窥视的压迫感",
+      "action": "侦探抬眼看向画面左侧的门，门把手缓缓转动。",
+      "asset_refs": [
+        "ch-detective",
+        "loc-office",
+        "prop-letter"
+      ],
+      "shot_size": "medium close-up",
+      "angle": "eye-level three-quarter",
+      "composition": "detective foreground right; door frame-left visible behind",
+      "camera_motion": "locked-off",
+      "lens_mm": 50,
+      "aperture_f": 4,
+      "lighting": "warm desk practical still camera-left; brief cool sweep across face",
+      "palette": "amber and desaturated cyan",
+      "sound": "rain fades under a single metallic door-handle click",
+      "continuity": {
+        "entry": "detective seated with letter held in right hand",
+        "exit": "detective gazes at door, door handle begins turning",
+        "screen_direction": "stationary"
+      },
+      "prompt": "5-second medium close-up in the SAME small noir office. Detective remains seated at the desk, keeping the same ivory sealed envelope in his right hand. He slowly raises his eyes toward the door on screen-left. In background the door handle begins a small rotation; cut before it opens. Locked-off camera, warm lamp camera-left and restrained cyan rain reflection. Unresolved suspense, controlled human performance.",
+      "avoid": [
+        "changing room layout",
+        "opening the door fully",
+        "envelope disappearing",
+        "identity drift"
+      ],
+      "status": "planned"
+    }
+  ],
+  "assumptions": [
+    "No reference imagery was provided; assets are planned descriptions, not generated media.",
+    "Dialogue intentionally omitted."
+  ],
+  "approved_decisions": [],
+  "generation": {
+    "status": "planned",
+    "provider": null,
+    "job_ids": [],
+    "output_uris": []
+  }
+}
