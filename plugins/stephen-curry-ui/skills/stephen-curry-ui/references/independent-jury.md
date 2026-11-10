@@ -1,29 +1,24 @@
-# Independent creative jury: review what shipped, not what was intended
+# Independent creative jury: review the work that shipped
 
-## Purpose
+For a major or high-impact release, use an independent review when it can change the decision. Freeze the artifact and share rendered screenshots, observed interactions, viewport labels, and technical measurements. Keep the first visual review blind to internal concepts and the builder's rationale where practical.
 
-Self-congratulation is a failure mode. Separate creative production from critique. For a high-impact or production release, create a **blind evidence packet** with actual rendered screenshots, observed interactions, viewport labels and technical measurements. Withhold internal concepts, source code, reasoning, moodboards, DESIGN.md and the builder's self-evaluation from the first independent artistic pass.
+The local `scripts/blind_jury.py` creates a private, de-identified file-named packet from browser audit evidence. It does not call reviewers or upload the packet. Screenshots can still contain client or customer information; store and share them only with proper authorization.
 
-Create with `python scripts/blind_jury.py --audit /path/to/.scui-audit/report.json --out /path/to/.scui-jury` when browser audit evidence exists. It creates a local, de-identified **file-named** packet, not an automatic independent model. The images themselves may show brand/customer data, so keep the packet local/private and enforce access controls. This tool does not send the pack anywhere.
+## Review lenses
 
-## Roles
+- Art direction: visual identity, composition, typography, and the quality of the full journey.
+- Motion and creative technology: transitions, interaction response, runtime cost, and fallbacks.
+- UX and accessibility: task clarity, keyboard/focus/touch, motion preferences, media controls, and forms.
+- Performance and engineering: measured loading, asset weight, errors, security, source correctness, and responsive behavior.
 
-- **Art Direction Critic:** whole-site aesthetic clarity, distinctive identity, composition/typography across pages, quality of middle and final scenes, originality, content truth.
-- **Motion & Film Critic:** interaction energy, frame-to-frame choreography, transition tone, interruption and scroll continuity, audio choices (where applicable).
-- **Creative Technology Critic:** realtime effects quality, performance integration, actual gesture responsiveness, shader/memory and graceful fallback.
-- **UX/Accessibility Critic:** task clarity, affordances, keyboard/focus/touch, motion reduced settings, media controls, form feedback.
-- **Performance Critic:** measured render/network responsiveness, asset weight, stable frame pacing, device/CPU tiers, mobile degradation.
-- **Engineering Critic:** source correctness, builds, tests, JS errors, real content, security, SEO and responsive integrity.
+These are concerns, not proof of independent reviewers. Use four real separate agents only when the project requires that jury; otherwise label a single-agent or sequential role review accurately.
 
-These are **roles**. Use fresh, separate subagents when supported. If not, run isolated sequential passes with separate prompts and call it *sequential role review*, not independent blind agents.
+## Findings
 
-## Judgment protocol
+1. Inspect the states and routes relevant to scope; a hero alone cannot establish whole-site quality.
+2. Provide precise evidence, reproduction steps, severity, audience impact, rationale, and confidence.
+3. Separate subjective art direction from factual accessibility and engineering checks. Do not claim awards certification or real-user validation from an agent review.
+4. Fix high-impact root causes, retest affected states, and preserve unresolved limitations.
+5. Still screenshots cannot establish motion or interaction. Mark those claims unverified until actual playback or browser observation.
 
-1. Inspect at least **entry, mid-journey, ending, routes, and material states**. A pretty hero cannot redeem an empty middle.
-2. Report findings with precise evidence references and reproduction steps, severity, audience impact, fix rationale and confidence.
-3. Use directional scores only for internal comparison; do not claim Awwwards jury certification. Separate subjective art judgment from factual WCAG/technical checks.
-4. Combine reviewer findings, deduplicate by root cause, prioritize P0/P1 critical defects and consequential P2 defects.
-5. Re-run relevant view/interaction/performance tests, preferably by the same reviewer after fixes; have the final critic assess the result without access to the builder's justifications.
-6. If only still screenshots were supplied, **block motion and interactivity claims** until footage or actual browser observation exists.
-
-See [Whole Experience QA](whole-experience-qa.md) and [Interface Baseline](interface-guidelines.md).
+See [whole-experience QA](whole-experience-qa.md) for a full-site evidence matrix.

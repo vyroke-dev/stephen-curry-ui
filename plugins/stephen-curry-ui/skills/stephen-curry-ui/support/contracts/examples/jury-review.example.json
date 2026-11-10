@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "demo",
+  "review_id": "review1",
+  "role": "art_director",
+  "execution_id": "independent-run1",
+  "artifact_id": "page",
+  "artifact_version": "v1",
+  "design_system_version": "ds1",
+  "status": "complete",
+  "findings": [],
+  "evidence_refs": [
+    "evidence/screenshot1.png"
+  ]
+}
