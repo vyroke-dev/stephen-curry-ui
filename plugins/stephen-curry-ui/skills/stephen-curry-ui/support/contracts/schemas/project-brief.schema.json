@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/stephen-curry-ui/contracts/project-brief/1.0.0",
+  "title": "project-brief",
+  "description": "Stephen Curry UI 4.1 protocol contract; illustrative $id namespace, not a live endpoint.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "objectives",
+    "audiences",
+    "device_strategy",
+    "unknowns"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "objectives": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "audiences": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "device_strategy": {
+      "type": "string",
+      "enum": [
+        "pending_user_choice",
+        "desktop_first",
+        "mobile_first",
+        "adaptive_multi_device"
+      ]
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "known_facts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "approval_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

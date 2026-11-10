@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/stephen-curry-ui/contracts/content-model/1.0.0",
+  "title": "content-model",
+  "description": "Stephen Curry UI 4.1 protocol contract; illustrative $id namespace, not a live endpoint.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "items"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "locale"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "verified",
+              "user_supplied",
+              "pending",
+              "placeholder"
+            ]
+          },
+          "locale": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_ref": {
+            "type": "string"
+          },
+          "publishable": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

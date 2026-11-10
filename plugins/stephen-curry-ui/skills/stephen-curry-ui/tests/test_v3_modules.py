@@ -11,8 +11,7 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
-import style_explorer, visual_metrics, design_guard, blind_jury, motion_evidence, experience_matrix
-from PIL import Image
+import style_explorer, design_guard, blind_jury, motion_evidence, experience_matrix
 
 
 class CreativeExplorerTest(unittest.TestCase):
@@ -47,6 +46,11 @@ class CreativeExplorerTest(unittest.TestCase):
 
 class MeasurementTest(unittest.TestCase):
     def test_image_metrics_and_diff(self):
+        try:
+            from PIL import Image
+            import visual_metrics
+        except ImportError:
+            self.skipTest('Pillow is not installed')
         with tempfile.TemporaryDirectory() as d:
             a,b,diff=[Path(d)/x for x in ('a.png','b.png','diff.png')]
             Image.new('RGB',(20,20),(255,0,0)).save(a)
@@ -74,6 +78,10 @@ class ContractTest(unittest.TestCase):
 
 class JuryTest(unittest.TestCase):
     def test_privacy_pack_and_path_traversal(self):
+        try:
+            from PIL import Image
+        except ImportError:
+            self.skipTest('Pillow is not installed')
         with tempfile.TemporaryDirectory() as t:
             root=Path(t);audit=root/'actual';audit.mkdir()
             Image.new('RGB',(15,15),(255,255,255)).save(audit/'one.png')

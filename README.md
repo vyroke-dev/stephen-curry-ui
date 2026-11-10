@@ -1,30 +1,31 @@
-# Stephen Curry UI — Creative Web Experience Skill
+# Stephen Curry UI 4.1
 
-**Version 3.1.0 · Model-agnostic**
+An agent- and model-agnostic suite for distinctive website design and frontend engineering. It contains one master orchestrator and nine focused skills for research, brand, experience architecture, Design Systems, creative direction, assets and motion, implementation, visual QA, and evaluation.
 
-A reusable skill for premium whole-site experience design, from creative research and art direction through interaction, motion, WebGL, production engineering, and evidence-based QA. No default AI text model is required.
+The workflow scales from a focused fix to a complete website. It preserves whole-journey craft for substantial work while avoiding full research, three concepts, or a multi-agent jury when a task does not benefit from them.
 
-## Use with Codex / OpenCodex
+## Install the complete suite
 
-Install the skill from this repository at `~/.agents/skills/stephen-curry-ui/` or your compatible agent's skill directory, preserving its references, templates, scripts and tests. The main entry is [SKILL.md](SKILL.md).
+Install all ten folders together so the relative skill references resolve:
 
-For plugin-aware Codex distributions:
+    git clone https://github.com/vyroke-dev/stephen-curry-ui.git
+    mkdir -p ~/.codex/skills
+    cp -R stephen-curry-ui/plugins/stephen-curry-ui/skills/stephen-curry-* ~/.codex/skills/
 
-```sh
-codex plugin marketplace add vyroke-dev/stephen-curry-ui
-```
+Use the host's documented skill directory if it differs. Refresh or restart the host if it does not discover newly installed skills. Plugin-aware hosts can use the marketplace manifests in this repository when supported.
 
-Then install **Stephen Curry UI** from the marketplace if supported by your distribution. Capability support depends on the host.
+Invoke the master with `$stephen-curry-ui`. Specialist skills can be used separately when their scope applies. Tool availability, approval behavior, and integrations depend on the active host.
 
-## Optional Claude Code plugin
+## Package checks
 
-```sh
-claude plugin marketplace add vyroke-dev/stephen-curry-ui
-claude plugin install stephen-curry-ui@stephen-curry-marketplace
-```
+From the installed or cloned `stephen-curry-ui` skill directory:
 
-No Claude Code dependency is required. Model choice is determined by the host: GPT, Claude, Gemini, DeepSeek and other capable agents can use the same instructions.
+    python3 scripts/validate_package.py
+    python3 support/tools/scui.py check-suite
+    python3 -m unittest discover -s tests -v
 
-See [中文使用指南](README.zh-CN.md), [研究报告](RESEARCH.zh-CN.md), and [changelog](CHANGELOG.md).
+The offline contracts require Python 3.11+; strict JSON Schema checks use `support/requirements-contracts.txt`. Some evidence scripts and tests have additional optional dependencies. Passing package checks does not prove host activation, visual quality, production readiness, or real-user outcomes.
 
-This is an independent project and is not affiliated with or endorsed by Stephen Curry.
+See [中文使用指南](README.zh-CN.md), [research notes](RESEARCH.zh-CN.md), and [changelog](CHANGELOG.md).
+
+This independent project is not affiliated with or endorsed by Stephen Curry.

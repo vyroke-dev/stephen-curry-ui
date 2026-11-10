@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "demo",
+  "operation_id": "op1",
+  "operation_type": "preview",
+  "target_element_id": "hero",
+  "base_canvas_version": "c1",
+  "base_code_revision": "abc123",
+  "allowed_paths": [
+    "src/Hero.tsx"
+  ],
+  "change": {
+    "intent": "replace headline"
+  },
+  "idempotency_key": "idem1"
+}

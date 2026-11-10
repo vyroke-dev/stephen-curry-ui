@@ -1,33 +1,26 @@
-# Mandatory reference research — observe the whole website
+# Reference research for consequential design decisions
 
-Research is mandatory **before any new creative design**. The four starter benchmarks are just a calibration set. Every new project requires category-appropriate living references, competition context and existing repo inspection. Don't reuse the same examples as a shortcut.
+Research depth follows the decision. A contained maintenance change may need only project files and one verified fact. A new site or major redesign benefits from category, experience, technical, and counterexample references. Do not gather sources without a decision they can inform.
 
-## Capture 4 layers for each serious reference
+## What to inspect
 
-1. **Brand thesis:** who the audience is, what the site is arguing/offering, visual and verbal world.
-2. **Site topology:** routes, navigation, hierarchy, entry-to-exit, internal pages and closing action.
-3. **Experience timeline:** all major chapters/sections, pauses, transitions, signature moments, effects/audio, mobile changes.
-4. **Real engineering affordances:** load behavior, keyboard and touch access, reduced motion, responsive behavior, media fallback, observable performance or missing evidence.
+For each useful reference, record its URL, access date, observed pages/states, viewport or device, evidence limitations, transferable principle, and what not to copy.
 
-For each sample: source URL, date, verified sections, conditions (viewport/device), what to borrow as a **principle**, and a **do-not-copy** exclusion. When only a screenshot exists, label motion claims `UNVERIFIED`. Awards alone are not technical evidence.
+1. **Brand thesis:** intended audience, offer, visual and verbal identity.
+2. **Site topology:** routes, navigation, hierarchy, and the path from entry to action.
+3. **Experience:** meaningful sections, transitions, interactions, endings, and device adaptations.
+4. **Engineering:** observable load behavior, keyboard/touch use, reduced motion, fallbacks, and performance evidence.
 
-## Required reference coverage
+Try desktop and mobile and inspect beyond the first fold when the project needs full-site inspiration. If access is blocked, describe what remains unobserved and use an authoritative case study where available. Do not present awards or screenshots as proof of runtime behavior.
 
-For a new site / major redesign, study enough examples to cover these different roles (one site may fill two):
-- **Category benchmark:** products and audiences with similar needs.
-- **Experience benchmark:** bold interaction, narrative or motion craft.
-- **Technical benchmark:** documented methods or compatible examples for the hardest effect.
-- **Counterexample:** an experience whose complexity hurts comprehension, accessibility or performance.
+## Synthesis
 
-Try both **desktop and mobile**. Inspect more than the first fold and at least one interior route. If access is blocked, identify exactly what is unseen, source alternative documented case studies, and leave observable checks for later.
+Before concept work on a major project, research should support clear answers to:
 
-## Synthesis test before concept work
+- What can make the whole journey memorable and useful?
+- Why does each major chapter exist?
+- Which interaction or effect has a credible purpose?
+- What are the implementation, accessibility, and performance trade-offs?
+- Which protected details or compositions must not be copied?
 
-The research record is *ready* only if it answers:
-- What will be memorable about the WHOLE journey?
-- Why does each chapter exist and why does it follow the previous one?
-- Which specific interaction/effect is an appropriate metaphor for the project?
-- What are the implementation and accessibility tradeoffs?
-- What will we NOT copy from our references?
-
-If it just lists colors, fonts, hero images, awards or adjectives, it fails the research gate.
+If evidence does not answer a material question, state the gap or ask one focused question. Otherwise proceed with an explicit assumption.

@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "demo",
+  "brand_name": "DEMO BRAND",
+  "positioning": "Illustrative only",
+  "design_principles": [
+    "Distinctive editorial rhythm"
+  ],
+  "status": "draft"
+}

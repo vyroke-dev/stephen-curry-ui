@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/stephen-curry-ui/contracts/research-evidence/1.0.0",
+  "title": "research-evidence",
+  "description": "Stephen Curry UI 4.1 protocol contract; illustrative $id namespace, not a live endpoint.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "evidence_id",
+    "claim",
+    "source_type",
+    "source_ref",
+    "observed_at",
+    "certainty"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "evidence_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "project_file",
+        "user_statement",
+        "official_documentation",
+        "primary_research",
+        "secondary_source",
+        "original_art_judgment"
+      ]
+    },
+    "source_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "certainty": {
+      "type": "string",
+      "enum": [
+        "verified",
+        "inferred",
+        "unknown"
+      ]
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "license_notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

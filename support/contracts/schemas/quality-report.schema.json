@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/stephen-curry-ui/contracts/quality-report/1.0.0",
+  "title": "quality-report",
+  "description": "Stephen Curry UI 4.1 release-evidence contract; illustrative $id namespace, not a live endpoint.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "artifact_id",
+    "artifact_version",
+    "scope_tier",
+    "required_gates",
+    "checks",
+    "release_blockers",
+    "release_decision"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "artifact_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+    },
+    "artifact_version": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+    },
+    "scope_tier": {
+      "type": "string",
+      "enum": [
+        "focused_change",
+        "feature",
+        "full_experience"
+      ]
+    },
+    "required_gates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "design_system_approval",
+          "concept_selection",
+          "independent_jury",
+          "browser_verification",
+          "accessibility_review"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "check_id",
+          "outcome",
+          "evidence_refs"
+        ],
+        "properties": {
+          "check_id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+          },
+          "outcome": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "fail",
+              "blocked",
+              "not_applicable"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "release_blockers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "release_decision": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "blocked",
+        "fail"
+      ]
+    },
+    "jury_report_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "measured_by": {
+      "type": "string"
+    },
+    "browser_verified": {
+      "type": "boolean"
+    },
+    "human_tested": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "required_gates": {
+            "contains": {
+              "const": "independent_jury"
+            }
+          }
+        },
+        "required": [
+          "required_gates"
+        ]
+      },
+      "then": {
+        "required": [
+          "jury_report_refs"
+        ],
+        "properties": {
+          "jury_report_refs": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "scope_tier": {
+            "const": "full_experience"
+          }
+        },
+        "required": [
+          "scope_tier"
+        ]
+      },
+      "then": {
+        "required": [
+          "jury_report_refs"
+        ],
+        "properties": {
+          "jury_report_refs": {
+            "minItems": 1
+          },
+          "required_gates": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "design_system_approval"
+                }
+              },
+              {
+                "contains": {
+                  "const": "concept_selection"
+                }
+              },
+              {
+                "contains": {
+                  "const": "independent_jury"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

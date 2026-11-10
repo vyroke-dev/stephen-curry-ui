@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/stephen-curry-ui/contracts/asset-manifest/1.0.0",
+  "title": "asset-manifest",
+  "description": "Stephen Curry UI 4.1 protocol contract; illustrative $id namespace, not a live endpoint.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "assets"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "asset_id",
+          "asset_type",
+          "source",
+          "rights_status"
+        ],
+        "properties": {
+          "asset_id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+          },
+          "asset_type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rights_status": {
+            "type": "string",
+            "enum": [
+              "cleared",
+              "needs_review",
+              "restricted"
+            ]
+          },
+          "purpose": {
+            "type": "string"
+          },
+          "optimized_bytes": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

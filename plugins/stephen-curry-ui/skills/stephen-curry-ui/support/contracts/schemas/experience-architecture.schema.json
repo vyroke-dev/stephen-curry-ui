@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/stephen-curry-ui/contracts/experience-architecture/1.0.0",
+  "title": "experience-architecture",
+  "description": "Stephen Curry UI 4.1 protocol contract; illustrative $id namespace, not a live endpoint.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "sitemap",
+    "critical_flows",
+    "content_status"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "sitemap": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "purpose"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "purpose": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "critical_flows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "success_criteria"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+          },
+          "success_criteria": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "content_status": {
+      "type": "string",
+      "enum": [
+        "verified",
+        "mixed",
+        "pending"
+      ]
+    },
+    "device_strategy": {
+      "type": "string",
+      "enum": [
+        "pending_user_choice",
+        "desktop_first",
+        "mobile_first",
+        "adaptive_multi_device"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
