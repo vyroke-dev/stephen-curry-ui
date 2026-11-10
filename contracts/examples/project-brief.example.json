@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "demo",
+  "objectives": [
+    "Distinct brand website"
+  ],
+  "audiences": [
+    "Visitors"
+  ],
+  "device_strategy": "pending_user_choice",
+  "unknowns": [
+    "Device priority: ask user"
+  ]
+}

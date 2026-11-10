@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "demo",
+  "task_id": "art-review1",
+  "role": "art_director",
+  "target_artifact_version": "v1",
+  "dependencies": [],
+  "allowed_paths": [
+    "src/"
+  ],
+  "status": "queued"
+}

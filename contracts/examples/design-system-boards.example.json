@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "demo",
+  "design_system_version": "ds1",
+  "status": "awaiting_approval",
+  "boards": [
+    {
+      "board_id": "brand-art-direction",
+      "design_system_version": "ds1",
+      "research_ref": "docs/research.md",
+      "image_generation": {
+        "method": "built_in_image_generation",
+        "tool_identifier": "EXAMPLE_ONLY_not_a_real_tool_call",
+        "model_identifier": "unknown",
+        "image_ref": "design-system-images/brand-art-direction/board.png",
+        "prompt_ref": "design-system-images/brand-art-direction/prompt.md",
+        "generation_record_ref": "design-system-images/brand-art-direction/generation.json"
+      }
+    },
+    {
+      "board_id": "color-system",
+      "design_system_version": "ds1",
+      "research_ref": "docs/research.md",
+      "image_generation": {
+        "method": "built_in_image_generation",
+        "tool_identifier": "EXAMPLE_ONLY_not_a_real_tool_call",
+        "model_identifier": "unknown",
+        "image_ref": "design-system-images/color-system/board.png",
+        "prompt_ref": "design-system-images/color-system/prompt.md",
+        "generation_record_ref": "design-system-images/color-system/generation.json"
+      }
+    },
+    {
+      "board_id": "typography",
+      "design_system_version": "ds1",
+      "research_ref": "docs/research.md",
+      "image_generation": {
+        "method": "built_in_image_generation",
+        "tool_identifier": "EXAMPLE_ONLY_not_a_real_tool_call",
+        "model_identifier": "unknown",
+        "image_ref": "design-system-images/typography/board.png",
+        "prompt_ref": "design-system-images/typography/prompt.md",
+        "generation_record_ref": "design-system-images/typography/generation.json"
+      }
+    },
+    {
+      "board_id": "layout-spacing",
+      "design_system_version": "ds1",
+      "research_ref": "docs/research.md",
+      "image_generation": {
+        "method": "built_in_image_generation",
+        "tool_identifier": "EXAMPLE_ONLY_not_a_real_tool_call",
+        "model_identifier": "unknown",
+        "image_ref": "design-system-images/layout-spacing/board.png",
+        "prompt_ref": "design-system-images/layout-spacing/prompt.md",
+        "generation_record_ref": "design-system-images/layout-spacing/generation.json"
+      }
+    },
+    {
+      "board_id": "component-library",
+      "design_system_version": "ds1",
+      "research_ref": "docs/research.md",
+      "image_generation": {
+        "method": "built_in_image_generation",
+        "tool_identifier": "EXAMPLE_ONLY_not_a_real_tool_call",
+        "model_identifier": "unknown",
+        "image_ref": "design-system-images/component-library/board.png",
+        "prompt_ref": "design-system-images/component-library/prompt.md",
+        "generation_record_ref": "design-system-images/component-library/generation.json"
+      }
+    },
+    {
+      "board_id": "responsive",
+      "design_system_version": "ds1",
+      "research_ref": "docs/research.md",
+      "image_generation": {
+        "method": "built_in_image_generation",
+        "tool_identifier": "EXAMPLE_ONLY_not_a_real_tool_call",
+        "model_identifier": "unknown",
+        "image_ref": "design-system-images/responsive/board.png",
+        "prompt_ref": "design-system-images/responsive/prompt.md",
+        "generation_record_ref": "design-system-images/responsive/generation.json"
+      }
+    },
+    {
+      "board_id": "motion-interaction",
+      "design_system_version": "ds1",
+      "research_ref": "docs/research.md",
+      "image_generation": {
+        "method": "built_in_image_generation",
+        "tool_identifier": "EXAMPLE_ONLY_not_a_real_tool_call",
+        "model_identifier": "unknown",
+        "image_ref": "design-system-images/motion-interaction/board.png",
+        "prompt_ref": "design-system-images/motion-interaction/prompt.md",
+        "generation_record_ref": "design-system-images/motion-interaction/generation.json"
+      }
+    }
+  ]
+}

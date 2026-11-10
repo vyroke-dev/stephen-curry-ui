@@ -1,30 +1,46 @@
-# Stephen Curry UI — Creative Web Experience Skill
+# Stephen Curry UI 4.2 · Image-Only Design Skill
 
-**Version 3.1.0 · Model-agnostic**
+**Every visual design must be created with actual built-in image generation. No code-created design.**
 
-A reusable skill for premium whole-site experience design, from creative research and art direction through interaction, motion, WebGL, production engineering, and evidence-based QA. No default AI text model is required.
+This local, standalone Codex/OpenCodex skill enforces:
 
-## Use with Codex / OpenCodex
+1. Research and verified user/project requirements.
+2. **Seven genuine image-generated Design System visual boards** (brand, color, typography, layout, components, responsive, motion) with review and actual approval.
+3. **Three distinct image-generated high-fidelity website concept sets**, desktop and mobile, with independent review and approval.
+4. **Only then** Codex implements the approved visual designs in code, with accessible responsive behavior and actual browser QA.
 
-Install the skill from this repository at `~/.agents/skills/stephen-curry-ui/` or your compatible agent's skill directory, preserving its references, templates, scripts and tests. The main entry is [SKILL.md](SKILL.md).
+HTML/CSS/React/SVG/Python/coded screenshots must **never** produce visual designs. Code is an implementation tool only after image approval. If the installed Codex host does not expose a callable built-in image generator, the skill **stops** and requests a user-visible handoff to a supported image tool; it never fabricates an image call or silently uses code.
 
-For plugin-aware Codex distributions:
+The package includes **10 native Skills**, **4 role-specific reviewer configs**, offline evidence contract checkers and post-implementation QA scripts. Independent agents and real image tools depend on actual host capabilities; this repo cannot grant them.
+
+## Install / upgrade
+
+Download repository (or standalone ZIP), then run from its root:
+
+```bash
+python3 install.py --global --upgrade
+```
+
+To include project-local reviewer TOML and contracts:
+
+```bash
+python3 install.py --project /path/to/your/website --upgrade
+```
+
+The installer backs up recognized older Skill directories before replacement and does not overwrite unrelated files. Check installed Skill discovery in your actual Codex distribution.
+
+## Marketplace/plugin
+
+For compatible Codex plugin hosts:
 
 ```sh
 codex plugin marketplace add vyroke-dev/stephen-curry-ui
 ```
 
-Then install **Stephen Curry UI** from the marketplace if supported by your distribution. Capability support depends on the host.
+Install **Stephen Curry UI** from the marketplace as supported by that host. Full bundled plugin content lives in [`plugins/stephen-curry-ui/`](plugins/stephen-curry-ui/); manifests are version **4.2.0**. For non-plugin Codex, use the native Skill install path above.
 
-## Optional Claude Code plugin
+No separate API key or Canvas is required by this Skill. Your logged-in Codex account does not guarantee the image tool is available. Web/AI requests may use the host's normal network service.
 
-```sh
-claude plugin marketplace add vyroke-dev/stephen-curry-ui
-claude plugin install stephen-curry-ui@stephen-curry-marketplace
-```
+[中文说明](README.zh-CN.md) · [安装说明](docs/INSTALLATION.zh-CN.md) · [变更记录](CHANGELOG.md)
 
-No Claude Code dependency is required. Model choice is determined by the host: GPT, Claude, Gemini, DeepSeek and other capable agents can use the same instructions.
-
-See [中文使用指南](README.zh-CN.md), [研究报告](RESEARCH.zh-CN.md), and [changelog](CHANGELOG.md).
-
-This is an independent project and is not affiliated with or endorsed by Stephen Curry.
+*Independent project. Not affiliated with or endorsed by Stephen Curry.*

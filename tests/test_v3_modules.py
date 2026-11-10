@@ -11,38 +11,8 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
-import style_explorer, visual_metrics, design_guard, blind_jury, motion_evidence, experience_matrix
+import visual_metrics, design_guard, blind_jury, motion_evidence, experience_matrix
 from PIL import Image
-
-
-class CreativeExplorerTest(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        cls.data=json.loads((ROOT/'templates/directions.example.json').read_text(encoding='utf-8'))
-
-    def test_three_real_distinct_directions(self):
-        page=style_explorer.build_html(self.data)
-        self.assertTrue(page.startswith('<!DOCTYPE html>'))
-        self.assertIn('Material Kinetics',page)
-        self.assertIn('role="tablist"',page)
-        self.assertIn('prefers-reduced-motion:reduce',page)
-        self.assertIn('replaceChildren',page)
-
-    def test_reject_html_and_unsafe_css_inputs(self):
-        bad=json.loads(json.dumps(self.data))
-        bad['directions'][0]['palette']['background']='red;position:absolute'
-        with self.assertRaises(ValueError):style_explorer.build_html(bad)
-        bad=json.loads(json.dumps(self.data))
-        bad['directions'][0]['id']='bad slug!'
-        with self.assertRaises(ValueError):style_explorer.build_html(bad)
-
-    def test_text_is_escaped_from_javascript_script_context(self):
-        altered=json.loads(json.dumps(self.data))
-        altered['directions'][0]['heroTitle']='</script><img src=x onerror=alert(1)>'
-        page=style_explorer.build_html(altered)
-        self.assertNotIn('</script><img',page)
-        self.assertIn('\\u003c/script\\u003e',page)
-        self.assertEqual(page.count('</script>'),1)
 
 
 class MeasurementTest(unittest.TestCase):
@@ -96,19 +66,6 @@ class MotionTest(unittest.TestCase):
         self.assertEqual(result['over33msFraction'],0.5)
         self.assertNotIn('fps',result)
 
-    @unittest.skipUnless(shutil.which('chromium') or shutil.which('google-chrome'),'Chromium not installed')
-    def test_offline_motion_cli(self):
-        import subprocess
-        html=ROOT/'examples/creative-explorer.html'
-        with tempfile.TemporaryDirectory() as d:
-            result=subprocess.run([sys.executable,str(ROOT/'scripts/motion_evidence.py'),
-                '--html-file',str(html),'--duration-ms','180','--frames','3','--out',d],
-                capture_output=True,text=True,timeout=30)
-            self.assertEqual(result.returncode,0, result.stderr)
-            data=json.loads((Path(d)/'motion-report.json').read_text())
-            self.assertEqual(len(data['frames']),3)
-            self.assertTrue(Path(data['frames'][0]).is_file())
-            self.assertIn('rafDiagnostic',data)
 
 
 class CoverageTest(unittest.TestCase):
@@ -122,32 +79,6 @@ class CoverageTest(unittest.TestCase):
         self.assertEqual(result['rows'][1]['captureStatus'],'NOT_CAPTURED')
 
 
-@unittest.skipUnless(shutil.which('chromium') or shutil.which('google-chrome'),'Chromium not installed')
-class BrowserSmokeTest(unittest.TestCase):
-    def test_design_explorer_actual_controls(self):
-        try:from playwright.sync_api import sync_playwright
-        except ImportError:self.skipTest('Playwright not installed')
-        html=style_explorer.build_html(json.loads((ROOT/'templates/directions.example.json').read_text(encoding='utf-8')))
-        with sync_playwright() as p:
-            browser=p.chromium.launch(headless=True, executable_path=shutil.which('chromium') or shutil.which('google-chrome'))
-            try:
-                page=browser.new_page(viewport={'width':1440,'height':900})
-                errors=[]
-                page.on('pageerror',lambda e: errors.append(str(e)))
-                page.set_content(html,wait_until='load')
-                self.assertIn('Space is a story',page.locator('#headline').inner_text())
-                page.get_by_role('tab',name='02 · Material Kinetics').click()
-                self.assertIn('Matter becomes',page.locator('#headline').text_content())
-                page.get_by_role('button',name='Mobile').click()
-                self.assertIn('phone',page.locator('#viewport').get_attribute('class'))
-                page.get_by_role('button',name='Preview entry movement').click()
-                self.assertIn('motion-pulse',page.locator('#viewport').get_attribute('class'))
-                self.assertEqual(errors,[])
-                with tempfile.TemporaryDirectory() as d:
-                    screenshot=Path(d)/'explorer.png'
-                    page.screenshot(path=str(screenshot))
-                    self.assertGreater(screenshot.stat().st_size,1000)
-            finally:browser.close()
 
 
 if __name__=='__main__':unittest.main()

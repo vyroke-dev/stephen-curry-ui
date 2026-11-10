@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "demo",
+  "design_system_version": "ds1",
+  "concepts": [
+    {
+      "concept_id": "c1",
+      "creative_thesis": "Idea 1",
+      "experience_architecture": "story",
+      "layout_strategy": "editorial",
+      "interaction_grammar": "scroll",
+      "high_fidelity_artifacts": [
+        "evidence/c1.png",
+        "evidence/c1-mobile.png"
+      ],
+      "design_system_version": "ds1",
+      "image_generation": {
+        "method": "built_in_image_generation",
+        "tool_identifier": "EXAMPLE_ONLY_not_a_real_tool_call",
+        "model_identifier": "unknown",
+        "prompt_ref": "evidence/c1-prompt.md",
+        "desktop_image_ref": "evidence/c1.png",
+        "mobile_image_ref": "evidence/c1-mobile.png",
+        "generation_record_ref": "evidence/c1-generation.json"
+      }
+    },
+    {
+      "concept_id": "c2",
+      "creative_thesis": "Idea 2",
+      "experience_architecture": "comparison",
+      "layout_strategy": "modular",
+      "interaction_grammar": "tabs",
+      "high_fidelity_artifacts": [
+        "evidence/c2.png",
+        "evidence/c2-mobile.png"
+      ],
+      "design_system_version": "ds1",
+      "image_generation": {
+        "method": "built_in_image_generation",
+        "tool_identifier": "EXAMPLE_ONLY_not_a_real_tool_call",
+        "model_identifier": "unknown",
+        "prompt_ref": "evidence/c2-prompt.md",
+        "desktop_image_ref": "evidence/c2.png",
+        "mobile_image_ref": "evidence/c2-mobile.png",
+        "generation_record_ref": "evidence/c2-generation.json"
+      }
+    },
+    {
+      "concept_id": "c3",
+      "creative_thesis": "Idea 3",
+      "experience_architecture": "immersive",
+      "layout_strategy": "spatial",
+      "interaction_grammar": "pointer",
+      "high_fidelity_artifacts": [
+        "evidence/c3.png",
+        "evidence/c3-mobile.png"
+      ],
+      "design_system_version": "ds1",
+      "image_generation": {
+        "method": "built_in_image_generation",
+        "tool_identifier": "EXAMPLE_ONLY_not_a_real_tool_call",
+        "model_identifier": "unknown",
+        "prompt_ref": "evidence/c3-prompt.md",
+        "desktop_image_ref": "evidence/c3.png",
+        "mobile_image_ref": "evidence/c3-mobile.png",
+        "generation_record_ref": "evidence/c3-generation.json"
+      }
+    }
+  ]
+}

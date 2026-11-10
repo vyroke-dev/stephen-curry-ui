@@ -1,4 +1,10 @@
-# GPT Image / Higgsfield media director — optional, practical, evidence-based
+# Image-first UI concept generation + optional production media direction
+
+## Priority override: mandatory built-in generated UI concepts
+
+For **new UI visual design**, first generate and approve the seven mandatory Design System visual boards using built-in image generation. Only then generate three actual high-fidelity website image concept sets. They are not optional production decoration. Use the locally exposed built-in image-generation tool if available. If unavailable, block concept stage and request an explicit authorized image-generation handoff. **Never replace it with coded HTML/CSS mockups.** This priority overrides any older fallback language below. See `image-only-design-pipeline.md`.
+
+The optional decisions below concern **production media assets (video, 3D, hero photographs)**, not the mandatory image-first concept stage.
 
 ## What was actually verified (2026-11-07)
 
@@ -36,6 +42,9 @@ Higgsfield can be valuable for:
 
 **Image:** inspect hallucinated type, content inaccuracies, art-direction drift, crop/focal point, legibility with overlay text, format, LCP strategy and asset license.
 
-**Failure mode:** if provider tools are absent, blocked, unsuitable or too expensive, do not pause the whole web build; proceed with high-quality code-native and authorized alternatives, and report the limitation. Higgsfield is an optional advantage, never a dependency.
+**Failure mode:** Higgsfield and production media are optional and may use authorized alternatives. However, missing **built-in Design System board or UI concept image generation** MUST pause the **new visual-design concept stage** and remain BLOCKED until real image artifacts are delivered. Do not switch to code-native mockups to pass the image-first gate. Existing-site maintenance tasks can proceed if no new visual concept is in scope.
 
 Sources: https://higgsfield.ai/ ; https://higgsfield.ai/ai-video-editor
+
+
+**Version 4.2 precedence:** Any legacy suggestion to use code-rendered visuals for creative exploration or Design System design is superseded. All formal design visuals must be created by genuine image generation; coded work is implementation only after visual approvals.

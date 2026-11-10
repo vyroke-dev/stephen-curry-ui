@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "demo",
+  "design_system_version": "ds1",
+  "status": "awaiting_approval",
+  "tokens": {
+    "colors": {
+      "primary": "#123456"
+    },
+    "typography": {
+      "family": "system-ui"
+    },
+    "spacing": {
+      "s": "8px"
+    },
+    "motion": {
+      "short": "120ms"
+    }
+  },
+  "components": [
+    "Button"
+  ],
+  "accessibility_target": "WCAG 2.2 AA",
+  "change_policy": "versioned proposal"
+}

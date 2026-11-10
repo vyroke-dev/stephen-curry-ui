@@ -4,6 +4,7 @@ import re
 from pathlib import Path
 
 root=Path(__file__).resolve().parents[1]
+suite=root.parents[2]
 text=(root/'SKILL.md').read_text(encoding='utf-8')
 fm=re.match(r'\A---\r?\n(.*?)\r?\n---\r?\n',text,re.S)
 assert fm,'Missing skill frontmatter'
@@ -19,7 +20,7 @@ for doc in root.rglob('*.md'):
     for link in re.findall(r'\]\(([^)]+)\)',doc.read_text(encoding='utf-8')):
         if link.startswith(('https://','http://','#','sandbox:')):continue
         path=(doc.parent/link.split('#')[0]).resolve()
-        assert root in path.parents or root==path, f'Unsafe link {link}'
+        assert suite in path.parents or suite==path, f'Unsafe link {link}'
         assert path.is_file(),f'Broken link in {doc.relative_to(root)}: {link}'
         checked+=1
 assert checked>=15

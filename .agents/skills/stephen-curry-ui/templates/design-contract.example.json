@@ -1,0 +1,8 @@
+{
+  "project": "Example token contract, replace with real DESIGN.md decisions",
+  "cssVariables": {
+    "--scui-bg": "#e8e3d9",
+    "--scui-foreground": "#252922",
+    "--scui-accent": "#57553a"
+  }
+}

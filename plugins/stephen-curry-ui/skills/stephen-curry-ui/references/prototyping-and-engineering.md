@@ -1,16 +1,16 @@
 # Feasibility-first creative engineering
 
-## Prototype the risky thing early
+## Prototype implementation risks only after visual image approval
 
-An award-caliber interactive website can fail at the exact moment its central effect moves from a still mockup to a real browser. Before polishing the full UI, isolate the **most technically uncertain and important interaction** as a small functioning proof of concept (PoC).
+An award-caliber interactive website can fail at the exact moment its central effect moves from a still mockup to a real browser. **Only after all required image-generated Design System boards and page concepts have been approved**, isolate the most technically uncertain interaction in a functioning implementation proof of concept (PoC). Prototyping code is implementation, never a design-generation method.
 
 1. Define the desired perceptual outcome (e.g., “draw a loop to fracture the world”), not a library preference.
 2. Make a smallest valid web demo with the real input type, motion, state changes, and a placeholder asset.
 3. Test at a normal desktop size, a narrow phone and a low-power setting or throttled environment when available.
 4. Test input interruption, keyboard alternative, touch handling, reduced motion, and deep linking/return.
-5. If successful, incorporate its interface and performance footprint into the Experience Blueprint. If failed, redesign the experience while preserving the user-facing thesis.
+5. If successful, incorporate its interface and performance footprint into the Experience Blueprint. If failed, request approval to revise the image-generated design direction before any replacement design; do not invent a new coded design.
 
-A coherent storyboard plus a proven interaction is more useful than 10 static full-page design generations. Save actual PoC code/URL, screenshots, a short screen recording where available, and observed tradeoffs.
+Image-generated, approved design boards and website concept images remain mandatory; a working PoC validates only implementation feasibility and never substitutes for the images. Save actual PoC code/URL, screenshots, a short screen recording where available, and observed tradeoffs.
 
 ## Architecture guidance
 
@@ -28,3 +28,6 @@ Every expensive effect must justify its GPU, bandwidth and interaction costs. Se
 Useful baseline public-site Core Web Vitals targets, measured at the 75th percentile in field data, are LCP ≤2.5s, INP ≤200ms and CLS ≤0.1. Lab tests and local Chrome measurements are not equivalent to real-world field data. Some experiential sites may need carefully explained tradeoffs, but fundamental usability is never optional.
 
 Sources: https://web.dev/articles/vitals ; https://developer.chrome.com/docs/devtools/performance ; https://tympanus.net/codrops/2026/07/17/zero-the-engineering-behind-a-defiant-interactive-narrative/
+
+
+**Version 4.2 precedence:** Any legacy suggestion to use code-rendered visuals for creative exploration or Design System design is superseded. All formal design visuals must be created by genuine image generation; coded work is implementation only after visual approvals.

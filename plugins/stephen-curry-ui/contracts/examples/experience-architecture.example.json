@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "demo",
+  "sitemap": [
+    {
+      "path": "/",
+      "purpose": "Brand introduction"
+    }
+  ],
+  "critical_flows": [
+    {
+      "id": "contact",
+      "success_criteria": "Visitor can submit the contact form"
+    }
+  ],
+  "content_status": "mixed",
+  "device_strategy": "pending_user_choice"
+}

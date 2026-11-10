@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "demo",
+  "assets": [
+    {
+      "asset_id": "hero",
+      "asset_type": "image",
+      "source": "illustrative-placeholder",
+      "rights_status": "needs_review"
+    }
+  ]
+}
