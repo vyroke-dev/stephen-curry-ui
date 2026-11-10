@@ -1,0 +1,7 @@
+[
+  {"task_id":"research","dependencies":[],"allowed_paths":["docs/research"],"access":"read"},
+  {"task_id":"brand","dependencies":["research"],"allowed_paths":["docs/brand"],"access":"write"},
+  {"task_id":"design-system","dependencies":["brand"],"allowed_paths":["docs/design-system"],"access":"write"},
+  {"task_id":"art-review","dependencies":["design-system"],"allowed_paths":["docs/concepts"],"access":"read"},
+  {"task_id":"ux-review","dependencies":["design-system"],"allowed_paths":["docs/concepts"],"access":"read"}
+]

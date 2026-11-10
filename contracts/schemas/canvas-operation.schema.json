@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/stephen-curry-ui/contracts/canvas-operation/1.0.0",
+  "title": "canvas-operation",
+  "description": "Stephen Curry UI 4.0 protocol contract; illustrative $id namespace, not a live endpoint.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "operation_id",
+    "operation_type",
+    "target_element_id",
+    "base_canvas_version",
+    "base_code_revision",
+    "allowed_paths",
+    "change",
+    "idempotency_key"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "operation_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+    },
+    "operation_type": {
+      "type": "string",
+      "enum": [
+        "preview",
+        "commit",
+        "rollback"
+      ]
+    },
+    "target_element_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+    },
+    "base_canvas_version": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+    },
+    "base_code_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "allowed_paths": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "change": {
+      "type": "object"
+    },
+    "idempotency_key": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+    },
+    "approval_ref": {
+      "type": "string"
+    },
+    "actor_id": {
+      "type": "string"
+    },
+    "expected_design_system_version": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.:-]{1,128}$"
+    }
+  },
+  "additionalProperties": false
+}

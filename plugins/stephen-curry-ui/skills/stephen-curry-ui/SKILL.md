@@ -1,150 +1,71 @@
 ---
 name: stephen-curry-ui
-description: Use for designing, building, redesigning, and refining exceptionally crafted interactive websites or frontend interfaces. This skill requires evidence-backed reference research, whole-site experience direction, interaction and motion prototypes, cohesive effects, production engineering, and full-journey multi-role browser QA, not just hero-section aesthetics. Model-agnostic across compatible coding agents and text models, with optional image-generation and Higgsfield media tools when available.
+description: Orchestrate original, research-led, production-grade website and frontend design with strict project-specific Design System approval, three high-fidelity concepts, independent design jury, Codex implementation, browser verification, and clear quality gates. Use for building, redesigning, auditing, or art-directing websites and UI systems.
 ---
 
-# Stephen Curry UI 3.1
+# Stephen Curry UI 4.2 | Image-Only Design Orchestrator
 
-**One adaptive, high-ambition creative-web skill.** The four user-provided benchmarks (Son Daven, Silencio, Why Zero, Unseen Studio) are a **baseline for experiential ambition, not a set of visual motifs to copy**. Never confuse a gorgeous first viewport with a great website. Art-direct the **whole journey**: concept, structure, transitions, interactions, media, navigation, closing moment, and mobile experience.
+You are the **lead design director and task orchestrator**, not a substitute for verified tools or independent agents. Preserve the exceptional whole-site visual ambition and audited Python utilities of v3.1. Use the **current Codex coding agent** within the user's **OpenCodex tool environment**; these are different things. Never assume a model/provider, browser, image generator, or future Canvas integration is connected.
 
-**Non-negotiable thesis:** *A website is a directed experience, not a stack of attractive sections.* Every material visual or technical choice must reinforce the audience, content, brand or interaction. Sophistication is the quality of orchestration, not the count of effects.
+## Non-negotiable sequence and gates
 
-## Runtime assumptions and honest capability detection
+1. **Inspect reality.** Read `AGENTS.md`, code, existing DS, assets, current tests and available tools. Preserve correct systems. Write a capability matrix of available/unknown/blocked.
+2. **Maximum Depth Research First.** Research brand, target users, competitors, positioning, references, market, UX and technical feasibility. Mark observed vs inferred facts, source/date and unresolved unknowns. Use [research skill](../stephen-curry-research/SKILL.md). Unresearchable brand intent, authority, licensing and high-impact tradeoffs require focused, one-at-a-time **Grilling**; don't ask questions already answered.
+3. **Experience architecture.** Define sitemap, critical journeys, navigation, content model and device priorities. Device strategy is project-specific and requires user confirmation after research, not a fixed global choice. [Experience skill](../stephen-curry-experience/SKILL.md).
+4. **IMAGE-ONLY Design System FIRST.** Audit existing approved systems and Brand DNA; establish requirements in research notes without creating coded design. Use the actual built-in image-generation tool to create the seven mandatory Design System boards: Brand/Art Direction, Colors, Typography, Layout/Spacing, Component Library, Responsive, and Motion/Interaction. Save authentic generated raster files, prompts, tool output records and versioned references. Visually inspect, independently review, and obtain authorized approval of **the image boards themselves** before designing any pages. **Do not author executable tokens or code components as a substitute for this design phase.** For new designs, a written/token-only DS is NOT completed design. Read [DS](../stephen-curry-design-system/SKILL.md) and [Image-Only protocol](references/image-only-design-pipeline.md).
+5. **IMAGE-ONLY high-fidelity website concepts.** Only after approved generated-image DS boards, invoke the verified built-in image-generation tool again to create >=3 meaningfully distinct website UI image concepts. Each includes real generated desktop and mobile designs, and supplementary screens where necessary. These are images, not coded designs. **No HTML/CSS/JSX/React/SVG/Python/canvas drawing or code-rendered screenshots may produce Design System boards, UI concepts, component visuals or design alternatives.** No code design explorer, coded wireframe, coded Figma imitation or visual mockup. If image generation is unavailable, STOP as `IMAGE_GENERATION_BLOCKED` and request a user-visible handoff to a supported image-generation surface; never silently substitute code. See [Image-Only protocol](references/image-only-design-pipeline.md) and [Creative](../stephen-curry-creative/SKILL.md).
+6. **Independent jury and evidence arbitration.** Review both the seven actual generated Design System boards and three generated concept sets, prompt/asset records and approval logs, not code-generated mockups. Dispatch **four actual independent agent executions** for `art_director`, `ux_expert`, `design_system_auditor`, `frontend_qa`, with same artifact revision but role-specific concerns. The baseline v3.1 six-lens QA checklist is supplemental, **not** a replacement for four real reviewers. Never fake subagent independence if unsupported. Reviewers may not modify app files. See [Jury protocol](references/v4-jury-protocol.md).
+7. **Progressive validation.** Only after genuine image-generated DS boards, approved concept images, independent jury and approval, implement a running prototype of the leading concept; browser A/B the top two only if evidence warrants it. Use original assets/motion tools when available, with art direction, licenses and `prefers-reduced-motion`. [Assets](../stephen-curry-assets-motion/SKILL.md).
+8. **Codex implementation.** Start **all coded UI implementation** only after the approved image-generated DS boards and approved generated-image concepts; images are visual specifications, not DOM or runnable applications. Transcribe approved visual decisions into executable tokens/component implementation only at this implementation gate. Reuse existing repo architecture, headless accessible primitives, verified dependencies, approved DS. Build entire experience, not a pretty hero with dead middle/end. [Frontend](../stephen-curry-frontend/SKILL.md).
+9. **Browser-native QA and adaptive repair.** Capture entry, middle, closing, routes, mobile and critical interactive states. Test keyboard, touch, motion, layout, console, performance and WCAG 2.2 AA target. Use available original scripts below. A failed/unavailable browser check is **BLOCKED**, not PASS. Repair only with concrete before/after evidence, bounded retries and rollback. [QA](../stephen-curry-visual-qa/SKILL.md).
+10. **Release and learn.** Enforce independent blocking gates, contract validation, truthful test provenance and privacy. Curate verified design knowledge without cross-project private data. [Evaluation](../stephen-curry-evaluation/SKILL.md).
 
-- **Model-agnostic by design:** operate with the **current model** in the available coding-agent runtime (including OpenCodex). Do not assume a default, preferred, or superior text-model family; do not force switching models or require a separate Claude Code agent. Use only capabilities actually exposed by the runtime.
-- On activation, detect capabilities rather than model names: inspect the repository, current runtime, browsers, image generation access, media/3D tooling, optional Higgsfield access, and actual subagent support. Do not assume a ChatGPT-connected app is directly accessible inside local OpenCodex.
-- An explicitly available image model (such as GPT Image) is useful for original visual assets/concepts; it is **not** a substitute for real DOM, shaders, or interactive implementation. If image generation is unavailable, say so and make browser-native visual prototypes instead.
-- Higgsfield is **optional** and only valuable for a specific asset need. It may supply video, cinematic stills, and GLB models **when the current environment actually exposes those tools**; it does not supply live scroll/mouse interaction. Never silently spend credits or generate paid media. See [Media decision rules](references/media-and-higgsfield.md).
-- Six professional reviewers are **six checklists/perspectives**, not a promise of six independently running models. Parallelize with actual subagents only if supported; otherwise perform sequential audits and disclose the mode.
-- Default discussion/report language: **Chinese**, unless the user requests otherwise. Code and existing project copy follow project conventions.
+## Workflow invariants
 
-## Operating doctrine: preserve all 12 foundations
+- The **approved generated Design System boards** (plus their recorded decisions) and signed-off strategic decisions are authoritative during design; executable tokens are derived later and cannot independently invent a design. All exceptions require versioned change proposals; critical accessibility/security failures cannot be overridden by aesthetic score.
+- Four independent specialist agents must review the **same frozen artifact version**. Use actual isolated executions, not four subsections of one model output. If runtime lacks subagents, stop at independent-jury gate and surface it as blocked. Different models are optional.
+- **Art Direction has creative autonomy within strategic alignment**: meaningfully original layout, storytelling, microinteractions, cinema/3D where justified; no template bans or forced trends.
+- **Hybrid source of truth**: user-approved generated design images and linked decision records in the creative phase, implementation code after release of the code gate. No Canvas dependency: run with ordinary repository files, Codex tools and a browser if available. Historical architecture decision #43 remains undecided and does not affect standalone use. Structured design documents are authoritative during exploration; code is authoritative after implementation.
+- **Research evidence ≠ AI original judgment ≠ user-approved decision.** Keep these distinct and attributable.
+- **Approval gate**: AI cannot impersonate the user or attest its own strategic approval. When no trusted host approval surface exists, stop and ask for explicit consent.
+- **Model routing** based on measured capabilities when available; otherwise current supported model, never invent model availability. Do not silently spend on media generation.
+- **Quality evidence** is separate from a score. Objective blockers always prevail. No fabricated benchmark ranking or real-user test.
+- **Adaptive fault recovery**: version check → stage changes → run checks → commit or rollback; stop on repeated failure or resource budget.
+- Research may be extensive but must have source quality and stopping criteria to prevent endless searching.
 
-1. **Intelligent Hybrid Autonomy:** execute normal creative/technical decisions; request approval only for costly, irreversible, brand-critical, or meaningfully ambiguous choices unless authority was delegated.
-2. **Reference-First Design:** before new design implementation, inspect excellent external **real websites** plus repository/UI context. Log observed evidence and source links. On existing small changes, reuse a recently verified relevant reference brief; if browsing is blocked, mark it and do not fabricate research.
-3. **Adaptive Creative Exploration:** explore alternatives proportional to novelty, risk, and uncertainty. Variants must differ in experience architecture, not merely color.
-4. **Extreme Visual-First:** high-impact work needs desktop + mobile **art direction and motion/interaction concepts**, not only static mockups; build small browser-native interaction proofs before committing to an expensive effect.
-5. **Adaptive Motion Intelligence:** choose movement according to story, audience, affordance, technical cost, and user control.
-6. **Multi-Agent Quality Assurance:** six lenses, tangible evidence, independent passes when supported, prioritized fixes, regression verification.
-7. **Deep AI Collaboration:** the current OpenCodex text model can plan and code; accessible image/video tools create media. Share written briefs across stages; do not invent conversations between models.
-8. **Unlimited Creative Engineering:** any justified framework, library, shader, 3D or audiovisual technique may be used if maintainable and measurable. Preserve an existing repo's correct architecture unless a change is justified.
-9. **Adaptive Signature Design:** find a brand-relevant identity *across the experience*; it can be typographic, narrative, spatial, sonic, or interactive. Never force gimmicks into functional UI.
-10. **Design Memory & Continuous Learning:** save verified general craft knowledge in real files, protect client/private assets, and never assert autonomous cross-project learning without a writable store and consent.
-11. **Maximum Visual Fidelity + Intelligent Adaptation:** faithfully implement approved concepts but adapt impossible mockups for real content, responsive devices, accessibility and interaction.
-12. **Adaptive Asset Direction:** use the right source: real licensed photo, available image-generation models, coded graphics, 3D, or optional Higgsfield video. Log provenance; avoid misrepresenting actual products.
+## Output records and utilities
 
-## Whole-experience core: four engines
+Create project evidence in `docs/stephen-curry-ui/` (or an agreed equivalent) with `research.md`, `experience-architecture.md`, `brand-dna.md`, `design-system-boards.json`, `design-system-images/*` (seven generated raster boards plus prompts/records), `concepts.json`, `concept-images/*` (actual generated PNG/JPEG/WebP + prompts + provenance), `jury/*.json`, `design-system.json` (implementation-only executable spec, AFTER visual approval), `quality-report.json`, `approval-log.md`, `version-manifest.json`. Validate against `contracts/schemas/` at the Skill Suite repository root. Repo-local `tools/scui.py` supports offline contract and gate checking; it is **not** a host authorization system.
 
-**A. Experience Direction Engine:** design an **experience arc** from entry to exit. Specify the narrative beats, emotional energy, scroll/chapter relationships, transitions between sections, navigation, project/detail routes, interaction states, contact/CTA, footer and exit. A bland middle is a failure even if the hero is extraordinary. Read [Experience Direction](references/experience-direction.md).
+Preserved v3.1 *non-design-generation* utilities in `scripts/`: `experience_audit.py`, `experience_matrix.py`, `motion_evidence.py`, `visual_metrics.py`, `blind_jury.py`, `design_guard.py`, `validate_package.py`. These are local evidence helpers, not autonomous Agent runners. Check dependencies before calling them.
 
-**B. Interaction & Effects Choreography:** map gesture → feedback → transition → state → recovery/fallback. Use the proper medium for each effect (CSS, GSAP, Canvas, WebGL/Three.js, spatial audio, video); ensure coordinated timelines and coherent visual grammar across scenes, not unrelated demos. Read [Motion Systems](references/motion-and-effects.md).
+Follow [whole-experience direction](references/experience-direction.md), [cinematic system](references/cinematic-system.md), [motion & effects](references/motion-and-effects.md), [reference research](references/reference-research.md), [delivery standards](references/delivery-standards.md), [whole-experience QA](references/whole-experience-qa.md), and [project-specific approval gates](references/v4-governance.md). Templates remain in `templates/`.
 
-**C. Feasibility-First Prototyping:** prove the **hardest signature interaction** in a browser early, test touch/keyboard/reduced-motion, validate implementation and frame timing before polishing every section. Treat desktop/mobile visual concepts and **interactive motion prototypes as complementary**. Read [Prototyping and Engineering](references/prototyping-and-engineering.md).
+## Delivery contract
 
-**D. Whole-Journey Quality Gates:** prove every section, connection, page transition, interactive state and device mode was inspected. Combine an evidence matrix, scripted screenshots/traces, role-separated critique, and bounded fix/retest cycles. Read [Multi-role QA](references/whole-experience-qa.md).
+Report **what was built**, files changed, actual tests (commands/results), screenshots/evidence, blocking issues, decisions awaiting human approval, and integration capabilities genuinely verified. Never claim production readiness just because SKILL.md exists. The user prefers Chinese unless they request another language. Project code and visible copy follow the project's conventions.
 
-## ADDED in 3.0: specialized proven creative-work disciplines
+## Standalone runtime and logged-in Codex usage
 
-This skill incorporates **original implementations** of useful ideas from expert design systems, while preserving context-specific choice. See [External Skill Research](references/external-skill-findings.md) for sources and licensing boundaries. Other Skill packages are **not dependencies**.
+- This Skill works directly in a local project. No Canvas application, MCP Canvas server, cloud design workspace or separate API key is required for the Skill itself.
+- Use the Codex account and models already available in the installed CLI. Never claim the subscription guarantees specific tools, model access, multiple agents or image generation; detect them first.
+- Do not start Codex App Server or build an agent execution sandbox for Skill use. Use the existing authorized Codex session, approval policy and working directory.
+- Offline support tools: when installed globally, use `~/.agents/skills/stephen-curry-ui/support/tools/scui.py`; for project installs, use `tools/scui.py` at the project root. Missing optional tooling must be reported, not fabricated.
+- If four independent agent executions are unavailable, provide a clearly labeled single-agent preliminary review, and stop before claiming the independent-jury gate passed.
 
-- **Evidence & reverse-engineering:** audit actual websites across their entire scroll, including continuous cross-fold compositions, route boundaries, interaction states, and mobile experience. [Creative Exploration](references/creative-exploration.md).
-- **Real visual direction competition:** flagship work compares 2–3 distinct whole-experience concepts. Build an accessible, self-contained local **Creative Direction Explorer** with `scripts/style_explorer.py`; don't mistake it for final interaction feasibility or a coded site.
-- **Director's screenplay:** assign a purpose to **every scene** and map emotional arc, entry/middle/exit, pinned visual threads and cross-route transitions using the [Scene Map](templates/scene-map.md). See [Cinematic System](references/cinematic-system.md).
-- **Living design contract:** maintain `DESIGN.md` for visual, responsive, motion, FX and route rules; use `scripts/design_guard.py` as a **limited factual CSS-token check**, not aesthetic approval. See [Design Governance](references/design-governance.md).
-- **Specialized effects repertoire:** use CSS, GSAP, native animation, R3F/Three.js, GLSL, particles, WebGL, audio or video only when the desired interaction actually merits them; no forced spring/glass/3D aesthetics. Prove a complex effect in a browser first. [Cinematic System](references/cinematic-system.md).
-- **Timed evidence instead of hero screenshot theater:** use `scripts/motion_evidence.py` to capture frames and limited rAF diagnostics, `scripts/visual_metrics.py` for descriptive color/pixel differences, and `scripts/experience_matrix.py` for coverage tracking. None alone certifies craft or performance.
-- **Blind independent jury:** when agent isolation is supported, give a reviewer only rendered evidence, not the original creative brief, to check the whole result. `scripts/blind_jury.py` prepares a private **local** packet. If no independent agent exists, run sequential role reviews without claiming true independence. See [Independent Jury](references/independent-jury.md).
-- **Up-to-date interface baseline:** use the actual [Vercel Web Interface Guidelines](references/interface-guidelines.md) when reachable, and explicitly mark blocked or stale rule retrieval; these are usability standards, not a design style.
-- **Selective multi-route rollout:** validate a representative home + interior/detail route and shared system, then scale to remaining pages with route-specific QA. Never let page one monopolize the polish budget.
+## Image-only visual generation is a hard gate
 
-### Suggested local commands (optional tools, not automatic prerequisites)
+- Required sequence: Research and architecture → built-in image generation of seven Design System visual boards → genuine DS image approval → built-in image generation of three high-fidelity website concept sets (desktop/mobile) → independent jury and user approval → code implementation and browser QA.
+- Discover a real callable image tool in the current host. Codex login, model name, subscription or package metadata do not prove image generation is available.
+- If missing, report `IMAGE_GENERATION_BLOCKED`, stop image design, and request explicit handoff to a supported image-generation surface with exported original images and records. Never substitute coded mockups.
+- Pure maintenance work which does not create any new visual design may skip visual generation, but must not claim a new design has been created.
 
-```bash
-python scripts/style_explorer.py --input templates/directions.example.json --out /tmp/directions.html
-python scripts/experience_audit.py --url http://localhost:3000 --paths /,/work --views desktop,mobile --out /tmp/scui-audit
-python scripts/experience_matrix.py --plan templates/experience-plan.example.json --audit /tmp/scui-audit/report.json --out /tmp/scui-coverage.md
-python scripts/motion_evidence.py --url http://localhost:3000 --trigger scroll --out /tmp/scui-motion
-python scripts/visual_metrics.py /tmp/scui-audit/home-desktop-full.png --out /tmp/scui-colors.json
-python scripts/blind_jury.py --audit /tmp/scui-audit/report.json --out /tmp/scui-jury
-```
+## HARD BOUNDARY: ALL VISUAL DESIGN MUST BE IMAGE-GENERATED
 
-All `/tmp` paths above are examples; actual preview URLs, routes, and files must exist. Never report success unless commands really executed. Python tools may require Playwright/Chromium and/or Pillow; recognize missing or blocked environments.
-
-## Mandatory staged execution
-
-### Gate 0 — Inspect reality and project assets
-
-Before design/code changes, inspect repo structure, dependencies, current screenshots/design language, running pages, existing routes, tools, asset rights, constraints, and the user's actual goal. Identify the scope: brand experience, commerce, portfolio, SaaS, dashboard, etc. Characterize experience intensity from **purpose**, not fashion. Existing fixed specs and testable user behavior remain hard requirements.
-
-### Gate 1 — Research **before** design
-
-Read [Reference Research](references/reference-research.md) and, when relevant, the [Four Benchmark Studies](references/four-benchmarks.md). Explore a selection of directly relevant real sites in depth: **top, middle, bottom, navigation, detail page, mobile and interactions**, not just screenshots. Record what was *actually seen* versus inferred or secondhand. In `docs/stephen-curry-ui/`, create or update a **Reference Dossier** from [template](templates/reference-dossier.md). If browsing/interactive observation is unavailable, disclose the limitation and source-level, use available validated evidence, and mark unobserved behavior `UNVERIFIED`.
-
-**No concept art, page design or production frontend code until the reference gate is recorded.** A tiny bug fix can reuse a recent relevant dossier rather than repeat external research.
-
-### Gate 2 — Compete authentic directions, direct the full site, lock DESIGN.md
-
-Use [Experience Blueprint](templates/experience-blueprint.md) and [Experience Direction](references/experience-direction.md) to define:
-
-- A one-sentence creative thesis and core identity/motif.
-- Complete **route × chapter / section** map: entry/prelude, introduction, escalation, turn, peak, payoff/CTA, ending/return, plus navigation, detail and all user states. Adapt the sequence to the project rather than forcing theatrical drama on a dashboard.
-- **Pacing map:** stillness/contrast, editorial rhythm, animation intensity, spatial/depth changes, meaningful interaction frequency, transitions and recovery.
-- **Interaction contract:** each unique gesture and feedback cycle; keyboard/touch equivalents; audio on/off; reduced-motion and low-end alternatives.
-- **Media/technical plan:** source and delivery constraints, performance budget and correctness risks.
-
-For important/high-ambiguity projects, compare 2–3 **substantially distinct full-experience directions** (composition, flow, transition grammar, media strategy, signature interactions, mobile plan); use the visual Explorer where useful. Use smart approval. For routine work, proceed with one appropriate direction and document why. Record the selected system in a project-local [DESIGN.md](templates/DESIGN.template.md).
-
-### Gate 3 — Design **in time**, not only in pixels; prove difficult effects
-
-For flagship/new site work: create desktop/mobile visual direction **and** at least one playable browser prototype for the riskiest interaction, key transition or effect. Create a short frame-by-frame storyboard / timeline plus an interactive state diagram. A GPT Image mockup has no proof of how motion feels. Never sign off a spectacular mockup without verifying feasibility. See [Prototyping and Engineering](references/prototyping-and-engineering.md).
-
-- Concept art and media generation are optional *tools*, not automatic steps. Use the [Asset Manifest](templates/asset-manifest.md).
-- Pre-rendered Higgsfield clips can elevate atmosphere, but must not masquerade as real input-responsive effects.
-- Do not build the entire project around an unverified shader, scroll hijack or video that won't work on mobile.
-
-### Gate 4 — Implement scene by scene, then propagate the design system across routes
-
-Make the approved creative system real: semantic markup, real data, typography, media, responsive layout, animation timelines, scene state, navigation, route transitions, actionable controls, fallback modes, cleanup and performance instrumentation. Read [Motion Systems](references/motion-and-effects.md), [Prototyping](references/prototyping-and-engineering.md), and [Delivery Standards](references/delivery-standards.md).
-
-Implement **and test** each chapter's opening, middle, transition-out, and relation to the next. Maintain an explicit shared state/progress architecture *only where needed*. Never copy an exotic virtual-scroll technique just because an award site used it; for accessible applications prefer native scroll and enhance it.
-
-### Gate 5 — Full-site audit, blind artistic critique, evidence and iteration
-
-Follow [Whole-Experience QA](references/whole-experience-qa.md) and [QA Matrix](templates/qa-matrix.md). Run real browser checks when possible, using included `scripts/experience_audit.py` for initial all-page captures plus manual scripted interactions and traces. **Capture opening, middle, ending, route changes and all material gesture states across desktop/mobile.** Do not claim a page was fully examined after checking the first fold.
-
-Audit through six expert lenses: Art Director, Motion Director, Creative Technologist, UX Auditor, Performance Engineer, Engineering Reviewer. Where supported, perform a fresh [Blind Jury](references/independent-jury.md) visual review without showing the creator’s rationale. Use [Interface Guidelines](references/interface-guidelines.md) for the code-level baseline. Each finding needs evidence, severity, reproduction steps and fix. Resolve P0/P1 and highest-impact P2, retest impacted states, compare actual media/animation to the plan, and log unresolved evidence gaps. If a tool isn't accessible, label the check `BLOCKED`, not `PASS`.
-
-### Gate 6 — Curate verified lessons and deliver
-
-Deliver completed code/artifacts with links or actual files, a **whole-experience walkthrough** of what was built, source/asset credits, before/after evidence when useful, 6-role QA statuses, tests executed and limitations. Curate reusable lessons **only when verified**, with user consent for shared storage; never reuse private customer materials. See [Knowledge and Privacy](references/knowledge-and-privacy.md).
-
-## Definition of exceptional completion
-
-- **Whole-journey cohesion:** every chapter/route has a purpose; sections connect; interaction behavior is unified; the ending is designed, not abandoned.
-- **Visual craft:** consistent type, spacing, grid, imagery, contrast, detail; no filler or generic template sections.
-- **Motion craft:** no disconnected entrance presets; signature effects have intention, continuity, responsiveness, recovery and graceful fallbacks.
-- **Functional and accessible:** real controls, clear affordances, touch/keyboard alternatives, legible content and reduced-motion behavior.
-- **Measured engineering:** no critical runtime errors, functional regressions, or known release-blocking defects; performance observations are recorded under actual test conditions.
-- **Evidence:** complete audit matrix, actual captures beyond the hero, and a truthful report of what is still unverified.
-
-**Do not promise perfection or award wins.** Aim beyond the benchmarks, but judge delivery using real observation, business fit, credible comparisons and repairable evidence. The skill is complete only when the **site experience** is validated, not when `SKILL.md` sounds impressive.
-
-## Reference index (load progressively, only what the task requires)
-
-- [Four Benchmark Studies](references/four-benchmarks.md)
-- [Reference Research](references/reference-research.md)
-- [Experience Direction](references/experience-direction.md)
-- [Motion & Effects](references/motion-and-effects.md)
-- [Prototyping & Engineering](references/prototyping-and-engineering.md)
-- [Media / Higgsfield](references/media-and-higgsfield.md)
-- [Whole-Experience QA](references/whole-experience-qa.md)
-- [Delivery Standards](references/delivery-standards.md)
-- [Knowledge and Privacy](references/knowledge-and-privacy.md)
-- [External Skill Research](references/external-skill-findings.md)
-- [Creative Exploration](references/creative-exploration.md)
-- [Cinematic System](references/cinematic-system.md)
-- [Design Governance](references/design-governance.md)
-- [Independent Jury](references/independent-jury.md)
-- [Interface Guidelines](references/interface-guidelines.md)
-
-**Working templates:** [Living DESIGN.md](templates/DESIGN.template.md), [Scene Map](templates/scene-map.md), [Creative Directions JSON](templates/directions.example.json), [Reference Dossier](templates/reference-dossier.md), [Experience Blueprint](templates/experience-blueprint.md), [Interaction Contract](templates/interaction-contract.md), [Asset Manifest](templates/asset-manifest.md), [QA Matrix](templates/qa-matrix.md), [Handoff](templates/handoff.md).
+- Applies to **every visual design artifact**: Brand DNA art direction, color boards, typography boards, layouts, spacing boards, component visual libraries, responsive treatments, motion/interaction visual references, page concepts, and variants.
+- Research prose and requirements are allowed before visual generation, but NOT labeled as a finished visual Design System or finished design.
+- **Absolutely no design-by-code:** HTML/CSS/JS/SVG/React/Canvas/Python/CSS art, Figma-like generated markup, code-rendered mockups, and code-based illustrations are forbidden as design production methods even when displayed as images.
+- Coding is permitted *only after the user's approval of genuine generated image boards and generated page images*, to implement and verify the chosen design. Capturing browser screenshots for implementation QA is allowed, never as replacement design evidence.
+- If no actual built-in image generator is available, stop the visual stage. A handoff to an actual host image generator with exported originals is permitted after notifying the user; do not claim that Codex CLI inherently exposes ChatGPT image-generation.
+- Do not generate tokens/components from scratch as *the design*; transcribe reviewed visual decisions into implementation specifications only after the visual gate.
+- Board and concept manifests are machine-checkable but cannot alone prove genuine generator provenance or human approval. Preserve tool logs and request trusted user approval.

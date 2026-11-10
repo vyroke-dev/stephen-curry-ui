@@ -1,0 +1,3 @@
+# Offline contract checks and generated-image raster validation
+jsonschema>=4.20,<5
+Pillow>=10,<13

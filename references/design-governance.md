@@ -1,6 +1,6 @@
 # Living DESIGN.md and design system governance
 
-Maintain a project-local `DESIGN.md` for standard and flagship websites, created from [template](../templates/DESIGN.template.md). It is the committed shared specification for layout, content hierarchy, responsive behavior, motion, asset direction, media licensing, code routes and QA evidence.
+**Only after approval of actual image-generated Design System boards and website concepts**, maintain an implementation `DESIGN.md` from [template](../templates/DESIGN.template.md). It is never a substitute for the generated visual designs. It is the committed shared specification for layout, content hierarchy, responsive behavior, motion, asset direction, media licensing, code routes and QA evidence.
 
 ## Contract
 
@@ -22,3 +22,6 @@ This original tool compares declared CSS variables to observed tokens. A PASS es
 ## Permanent constraints
 
 Keep client-specific assets and strategy in that client project; portable insights are curated only after verification and consent. Preserve existing project architecture and copy truth. The independent reviewer must receive actual site evidence, *not* this design rationale, during initial blind judging.
+
+
+**Version 4.2 precedence:** Any legacy suggestion to use code-rendered visuals for creative exploration or Design System design is superseded. All formal design visuals must be created by genuine image generation; coded work is implementation only after visual approvals.

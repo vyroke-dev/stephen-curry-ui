@@ -56,7 +56,7 @@ Add a new effect only if it is grammatically connected, or its contrast is **del
 
 ## Structured evaluation: avoid shallow concept comparisons
 
-When comparing concepts, use a brief weighted rationale for audience fit, originality, whole-journey flow, interaction coherence, feasible production and accessibility. Do not over-trust subjective 0–100 scores. Prototype top technical risks before selecting a beautiful but impossible option.
+When comparing concepts, use a brief weighted rationale for audience fit, originality, whole-journey flow, interaction coherence, feasible production and accessibility. Do not over-trust subjective 0–100 scores. Assess technical feasibility from existing evidence before selecting a direction; implement PoCs only after approved generated-image design, and request reapproval of changed visuals.
 
 ## Red flags that block approval
 
@@ -67,3 +67,6 @@ When comparing concepts, use a brief weighted rationale for audience fit, origin
 - “Signature moment” that never advances the user's comprehension.
 - Full experience only on desktop; mobile becomes static afterthought.
 - No ending, no route navigation, no recovery from interaction gating.
+
+
+**Version 4.2 precedence:** Any legacy suggestion to use code-rendered visuals for creative exploration or Design System design is superseded. All formal design visuals must be created by genuine image generation; coded work is implementation only after visual approvals.

@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/stephen-curry-ui/contracts/design-system-boards/1.0.0",
+  "title": "design-system-boards",
+  "description": "Image-only DS visual evidence metadata; source authenticity and user approval still require external proof.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project_id",
+    "design_system_version",
+    "status",
+    "boards"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "design_system_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "awaiting_approval",
+        "approved",
+        "blocked"
+      ]
+    },
+    "approval_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "boards": {
+      "type": "array",
+      "minItems": 7,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "board_id",
+          "design_system_version",
+          "image_generation"
+        ],
+        "properties": {
+          "board_id": {
+            "enum": [
+              "brand-art-direction",
+              "color-system",
+              "typography",
+              "layout-spacing",
+              "component-library",
+              "responsive",
+              "motion-interaction"
+            ]
+          },
+          "design_system_version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "research_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "visual_notes": {
+            "type": "string"
+          },
+          "image_generation": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "method",
+              "tool_identifier",
+              "image_ref",
+              "prompt_ref",
+              "generation_record_ref"
+            ],
+            "properties": {
+              "method": {
+                "const": "built_in_image_generation"
+              },
+              "tool_identifier": {
+                "type": "string",
+                "minLength": 1
+              },
+              "model_identifier": {
+                "type": "string"
+              },
+              "image_ref": {
+                "type": "string",
+                "minLength": 1
+              },
+              "prompt_ref": {
+                "type": "string",
+                "minLength": 1
+              },
+              "generation_record_ref": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "approved"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "approval_ref"
+        ]
+      }
+    }
+  ]
+}

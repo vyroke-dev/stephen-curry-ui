@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "demo",
+  "items": [
+    {
+      "id": "hero",
+      "status": "placeholder",
+      "locale": "en-US",
+      "publishable": false
+    }
+  ]
+}
